@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CollectionTitleV">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="56"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qk-Pb-GB1">
+                    <rect key="frame" x="0.0" y="23" width="2" height="10"/>
+                    <color key="backgroundColor" red="0.6705882352941176" green="0.074509803921568626" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="KZs-pZ-3Dq"/>
+                        <constraint firstAttribute="width" constant="2" id="ryc-E5-cOV"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y69-id-RaI">
+                    <rect key="frame" x="8" y="18" width="36" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="Wa8-eN-fQE"/>
+                        <constraint firstAttribute="height" constant="20" id="XWn-zf-zrZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qey-yw-0NU">
+                    <rect key="frame" x="46" y="17" width="115" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="115" id="Qm2-gz-aKa"/>
+                        <constraint firstAttribute="height" constant="22" id="aLN-IC-xVw"/>
+                    </constraints>
+                    <state key="normal" image="邻圈_推荐_E"/>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="9Qk-Pb-GB1" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="2VJ-d7-pRN"/>
+                <constraint firstItem="9Qk-Pb-GB1" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="Diz-Y9-CWA"/>
+                <constraint firstItem="Qey-yw-0NU" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="Imn-WV-Owa"/>
+                <constraint firstItem="Qey-yw-0NU" firstAttribute="leading" secondItem="y69-id-RaI" secondAttribute="trailing" constant="2" id="dO6-fp-RaP"/>
+                <constraint firstItem="y69-id-RaI" firstAttribute="leading" secondItem="9Qk-Pb-GB1" secondAttribute="trailing" constant="6" id="rke-rY-d6X"/>
+                <constraint firstItem="y69-id-RaI" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="vZt-Il-C2J"/>
+            </constraints>
+            <connections>
+                <outlet property="titleImgBtn" destination="Qey-yw-0NU" id="zVq-gD-p1S"/>
+                <outlet property="titleLb" destination="y69-id-RaI" id="zDo-Vv-l8o"/>
+            </connections>
+            <point key="canvasLocation" x="338.5" y="454"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="邻圈_推荐_E" width="95" height="12"/>
+    </resources>
+</document>

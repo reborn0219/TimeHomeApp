@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="L_SharedListSecondTVC">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加共享人手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lp7-LK-Ksk">
+                        <rect key="frame" x="15" y="22" width="131" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Wol-cn-pb1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzT-O8-zt5">
+                        <rect key="frame" x="269" y="14" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="CU7-wQ-s8q"/>
+                            <constraint firstAttribute="height" constant="36" id="TP3-yS-Dlk"/>
+                        </constraints>
+                        <state key="normal" image="二轮车共享--添加图标"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JzT-O8-zt5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="I6d-eW-7NI"/>
+                    <constraint firstAttribute="trailing" secondItem="JzT-O8-zt5" secondAttribute="trailing" constant="15" id="O8y-cu-mRi"/>
+                    <constraint firstItem="lp7-LK-Ksk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Pkh-mV-zvG"/>
+                    <constraint firstItem="lp7-LK-Ksk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="zGd-c8-pdB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-89" y="-42"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="二轮车共享--添加图标" width="30" height="30"/>
+    </resources>
+</document>

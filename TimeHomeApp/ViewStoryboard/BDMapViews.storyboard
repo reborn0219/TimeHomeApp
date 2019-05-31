@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--地图-->
+        <scene sceneID="Bgj-wK-V67">
+            <objects>
+                <viewController restorationIdentifier="ShowMapVC" storyboardIdentifier="ShowMapVC" id="x38-U9-lwt" customClass="ShowMapVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DlQ-iT-z18"/>
+                        <viewControllerLayoutGuide type="bottom" id="y4b-FE-I4F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yxy-EZ-Jfr">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前地址" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep0-3k-99D">
+                                <rect key="frame" x="10" y="10" width="580" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Xem-87-TLR"/>
+                                    <constraint firstAttribute="height" constant="46" id="x1m-5y-SY6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="x1m-5y-SY6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="x1m-5y-SY6"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <view contentMode="scaleToFill" restorationIdentifier="BMKMapView" translatesAutoresizingMaskIntoConstraints="NO" id="kVZ-1i-dR4" customClass="BMKMapView">
+                                <rect key="frame" x="0.0" y="40" width="600" height="496"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ep0-3k-99D" firstAttribute="top" secondItem="DlQ-iT-z18" secondAttribute="bottom" constant="10" id="1jP-Uh-PYL"/>
+                            <constraint firstAttribute="trailing" secondItem="kVZ-1i-dR4" secondAttribute="trailing" id="DT1-hm-tMn"/>
+                            <constraint firstAttribute="trailing" secondItem="Ep0-3k-99D" secondAttribute="trailing" constant="10" id="KGf-sA-rr1"/>
+                            <constraint firstItem="Ep0-3k-99D" firstAttribute="leading" secondItem="Yxy-EZ-Jfr" secondAttribute="leading" constant="10" id="KXG-tE-tu0"/>
+                            <constraint firstItem="kVZ-1i-dR4" firstAttribute="leading" secondItem="Yxy-EZ-Jfr" secondAttribute="leading" id="YQM-G9-ucP"/>
+                            <constraint firstItem="kVZ-1i-dR4" firstAttribute="top" secondItem="Ep0-3k-99D" secondAttribute="bottom" constant="10" id="hSy-dv-jjH"/>
+                            <constraint firstItem="y4b-FE-I4F" firstAttribute="top" secondItem="kVZ-1i-dR4" secondAttribute="bottom" id="jhq-Aa-aC0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="地图" id="aVC-Ik-nxj">
+                        <barButtonItem key="backBarButtonItem" title=" " id="kEa-Vc-jLQ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bMapView" destination="kVZ-1i-dR4" id="Mck-AL-W4q"/>
+                        <outlet property="label_Addr" destination="Ep0-3k-99D" id="ZDF-Kp-Bd2"/>
+                        <segue destination="Avm-Iw-5gE" kind="push" id="Uy5-2S-DO6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbF-If-nyH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-257" y="1442"/>
+        </scene>
+        <!--社区-->
+        <scene sceneID="SCu-sE-bjN">
+            <objects>
+                <navigationController restorationIdentifier="mapNav" storyboardIdentifier="mapNav" id="Vcv-zo-oZO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="社区" image="社区_uncheck" id="XyG-dy-hVA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="7d1-Wj-Xbd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="x38-U9-lwt" kind="relationship" relationship="rootViewController" id="uy4-44-D5A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4uW-0H-bhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1077" y="2201"/>
+        </scene>
+        <!--获取地址-->
+        <scene sceneID="Vbf-rP-cVl">
+            <objects>
+                <viewController restorationIdentifier="GetAddressMapVC" storyboardIdentifier="GetAddressMapVC" id="Avm-Iw-5gE" customClass="GetAddressMapVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YCn-yd-qKH"/>
+                        <viewControllerLayoutGuide type="bottom" id="55u-bD-E7d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Odd-ge-ZPL">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0G-rh-U1R">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前地址" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NK-LK-bgw">
+                                        <rect key="frame" x="10" y="0.0" width="580" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="IkF-6i-lad"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Njy-ud-QAV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="IkF-6i-lad"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="IkF-6i-lad"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="0NK-LK-bgw" firstAttribute="leading" secondItem="P0G-rh-U1R" secondAttribute="leading" constant="10" id="KYa-WP-fhZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="0NK-LK-bgw" secondAttribute="trailing" constant="10" id="KrT-tR-z76"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="jkd-eg-Aab"/>
+                                    <constraint firstItem="0NK-LK-bgw" firstAttribute="top" secondItem="P0G-rh-U1R" secondAttribute="top" id="nme-4C-lyb"/>
+                                    <constraint firstAttribute="bottom" secondItem="0NK-LK-bgw" secondAttribute="bottom" id="pgP-1L-4J4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" restorationIdentifier="BMKMapView" translatesAutoresizingMaskIntoConstraints="NO" id="fEn-KR-2FK" customClass="BMKMapView">
+                                <rect key="frame" x="0.0" y="30" width="600" height="506"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P0G-rh-U1R" firstAttribute="leading" secondItem="Odd-ge-ZPL" secondAttribute="leading" id="Nld-Au-TAM"/>
+                            <constraint firstItem="fEn-KR-2FK" firstAttribute="leading" secondItem="Odd-ge-ZPL" secondAttribute="leading" id="XUz-Rn-Z6c"/>
+                            <constraint firstItem="55u-bD-E7d" firstAttribute="top" secondItem="fEn-KR-2FK" secondAttribute="bottom" id="a3e-vE-H41"/>
+                            <constraint firstAttribute="trailing" secondItem="fEn-KR-2FK" secondAttribute="trailing" id="bEp-BZ-guW"/>
+                            <constraint firstItem="fEn-KR-2FK" firstAttribute="top" secondItem="P0G-rh-U1R" secondAttribute="bottom" constant="10" id="fKl-Mu-pQo"/>
+                            <constraint firstItem="P0G-rh-U1R" firstAttribute="top" secondItem="Odd-ge-ZPL" secondAttribute="topMargin" id="nV5-Dc-aOT"/>
+                            <constraint firstAttribute="trailing" secondItem="P0G-rh-U1R" secondAttribute="trailing" id="sal-lF-Zjf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="获取地址" id="lZC-Hi-ltN">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ybs-en-pKK"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="MapView" destination="fEn-KR-2FK" id="AoW-bS-USq"/>
+                        <outlet property="lab_Addr" destination="0NK-LK-bgw" id="Rhq-WH-f4m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywx-dH-UdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-332" y="2939"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="社区_uncheck" width="23" height="23"/>
+    </resources>
+</document>

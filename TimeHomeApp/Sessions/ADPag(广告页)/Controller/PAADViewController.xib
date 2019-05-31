@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PAADViewController">
+            <connections>
+                <outlet property="adImageView" destination="vLC-NL-J0G" id="gif-ZE-Hqr"/>
+                <outlet property="exitButton" destination="Zt6-7R-jdf" id="Lj5-0U-5WK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vLC-NL-J0G">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zt6-7R-jdf">
+                    <rect key="frame" x="295" y="52" width="56" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.19020226883561644" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="BOu-Kk-WKN"/>
+                        <constraint firstAttribute="width" constant="56" id="PZj-Z6-iYK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <state key="normal" title="跳过">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="exit" destination="-1" eventType="touchUpInside" id="lja-hI-pex"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vLC-NL-J0G" secondAttribute="bottom" id="Rjr-iY-jr2"/>
+                <constraint firstAttribute="trailing" secondItem="vLC-NL-J0G" secondAttribute="trailing" id="Rk2-Wm-8sv"/>
+                <constraint firstAttribute="trailing" secondItem="Zt6-7R-jdf" secondAttribute="trailing" constant="24" id="azz-Ir-hUJ"/>
+                <constraint firstItem="vLC-NL-J0G" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bPc-IM-wiw"/>
+                <constraint firstItem="vLC-NL-J0G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ciC-p1-fCG"/>
+                <constraint firstItem="Zt6-7R-jdf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="52" id="fLX-Fc-aEP"/>
+            </constraints>
+            <point key="canvasLocation" x="-73.5" y="49.5"/>
+        </view>
+    </objects>
+</document>

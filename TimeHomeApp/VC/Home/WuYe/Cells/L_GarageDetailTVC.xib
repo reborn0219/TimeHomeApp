@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="L_GarageDetailTVC">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="440" height="54"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="未入库车辆_初始状态" translatesAutoresizingMaskIntoConstraints="NO" id="QDF-ee-yIL">
+                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="T8r-wr-yik"/>
+                            <constraint firstAttribute="width" constant="20" id="Xn7-eV-wf4"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="智能车库_车牌号_联系车主" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-Yj-TeI">
+                        <rect key="frame" x="20" y="0.0" width="20" height="49.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="adl-k3-TLw"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="冀A99999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrT-44-593">
+                        <rect key="frame" x="50" y="0.0" width="72" height="49.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bD-Vl-mUt">
+                        <rect key="frame" x="384" y="0.0" width="56" height="49.5"/>
+                        <color key="backgroundColor" red="0.82352941180000006" green="0.1176470588" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="56" id="vmK-Ne-vKm"/>
+                        </constraints>
+                        <state key="normal" image="删除图标"/>
+                        <connections>
+                            <action selector="garageButtonsDidTouch:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="H06-Jo-EHI"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhD-bf-3Lg">
+                        <rect key="frame" x="328" y="0.0" width="56" height="49.5"/>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.83137254901960778" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="56" id="YWY-EX-UYN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                        <state key="normal" title="修改">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="garageButtonsDidTouch:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fqX-Hj-OVe"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vp6-mj-S0r">
+                        <rect key="frame" x="253" y="0.0" width="75" height="49.5"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.61568627450980395" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="POx-lJ-dDf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                        <state key="normal" title="定时锁车">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="garageButtonsDidTouch:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="a9x-v1-t7T"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已入库" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQB-6o-rkL">
+                        <rect key="frame" x="198" y="0.0" width="45" height="49.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                        <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0C-RP-Fag">
+                        <rect key="frame" x="0.0" y="49.5" width="440" height="5"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="5" id="I6b-wj-h7j"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5bD-Vl-mUt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0pq-Ao-yoA"/>
+                    <constraint firstAttribute="bottom" secondItem="5Zd-Yj-TeI" secondAttribute="bottom" constant="5" id="KDJ-5k-Cd3"/>
+                    <constraint firstItem="D0C-RP-Fag" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LdZ-RY-z19"/>
+                    <constraint firstItem="5Zd-Yj-TeI" firstAttribute="leading" secondItem="QDF-ee-yIL" secondAttribute="trailing" id="Mw1-Wx-Q0C"/>
+                    <constraint firstAttribute="bottom" secondItem="5bD-Vl-mUt" secondAttribute="bottom" constant="5" id="NIM-MD-UOk"/>
+                    <constraint firstAttribute="bottom" secondItem="D0C-RP-Fag" secondAttribute="bottom" id="PQR-0E-nCx"/>
+                    <constraint firstAttribute="bottom" secondItem="hQB-6o-rkL" secondAttribute="bottom" constant="5" id="R4o-sU-KtN"/>
+                    <constraint firstAttribute="bottom" secondItem="BrT-44-593" secondAttribute="bottom" constant="5" id="RdR-Q5-D3f"/>
+                    <constraint firstItem="5bD-Vl-mUt" firstAttribute="leading" secondItem="OhD-bf-3Lg" secondAttribute="trailing" id="Se7-aj-bTu"/>
+                    <constraint firstItem="QDF-ee-yIL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Tva-Lh-WWW"/>
+                    <constraint firstItem="OhD-bf-3Lg" firstAttribute="leading" secondItem="vp6-mj-S0r" secondAttribute="trailing" id="ViH-6k-vuH"/>
+                    <constraint firstAttribute="trailing" secondItem="D0C-RP-Fag" secondAttribute="trailing" id="WAC-xB-JAm"/>
+                    <constraint firstAttribute="bottom" secondItem="vp6-mj-S0r" secondAttribute="bottom" constant="5" id="XE2-5g-qL6"/>
+                    <constraint firstItem="5Zd-Yj-TeI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aup-Ah-s4E"/>
+                    <constraint firstItem="OhD-bf-3Lg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="f5D-6k-MbN"/>
+                    <constraint firstItem="QDF-ee-yIL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fZR-yd-I5l"/>
+                    <constraint firstAttribute="bottom" secondItem="OhD-bf-3Lg" secondAttribute="bottom" constant="5" id="gsm-Oe-IO6"/>
+                    <constraint firstItem="BrT-44-593" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iE2-nn-gBw"/>
+                    <constraint firstItem="vp6-mj-S0r" firstAttribute="leading" secondItem="hQB-6o-rkL" secondAttribute="trailing" constant="10" id="mBX-kD-ca5"/>
+                    <constraint firstAttribute="trailing" secondItem="5bD-Vl-mUt" secondAttribute="trailing" id="n83-xf-7gM"/>
+                    <constraint firstItem="vp6-mj-S0r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nAZ-Bw-6rB"/>
+                    <constraint firstItem="BrT-44-593" firstAttribute="leading" secondItem="5Zd-Yj-TeI" secondAttribute="trailing" constant="10" id="pB6-Pb-64V"/>
+                    <constraint firstItem="hQB-6o-rkL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uVi-t4-drP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="carNum_Label" destination="BrT-44-593" id="MUd-fb-pKZ"/>
+                <outlet property="deleteButtonLayoutConstraint" destination="vmK-Ne-vKm" id="aQS-fM-rMk"/>
+                <outlet property="delete_Button" destination="5bD-Vl-mUt" id="vyb-9h-zsd"/>
+                <outlet property="img_Init" destination="QDF-ee-yIL" id="3Wh-EV-BXc"/>
+                <outlet property="isInLabel" destination="hQB-6o-rkL" id="dRT-0G-4ge"/>
+                <outlet property="motifyLayoutConstraint" destination="YWY-EX-UYN" id="0Nj-8Y-74J"/>
+                <outlet property="motify_Button" destination="OhD-bf-3Lg" id="6oL-kB-hpR"/>
+                <outlet property="timeLockLayoutConstraint" destination="POx-lJ-dDf" id="LU9-9A-bMP"/>
+                <outlet property="timeLock_Button" destination="vp6-mj-S0r" id="kEX-ua-8R9"/>
+            </connections>
+            <point key="canvasLocation" x="-469" y="-104"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="删除图标" width="22" height="24"/>
+        <image name="智能车库_车牌号_联系车主" width="20" height="13"/>
+        <image name="未入库车辆_初始状态" width="30" height="30"/>
+    </resources>
+</document>

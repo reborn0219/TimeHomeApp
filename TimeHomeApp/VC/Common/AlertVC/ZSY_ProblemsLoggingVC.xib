@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZSY_ProblemsLoggingVC">
+            <connections>
+                <outlet property="bgView" destination="pcS-1a-faS" id="nM2-V2-SRU"/>
+                <outlet property="cancelButton" destination="Gmh-BS-QbO" id="neH-au-2gl"/>
+                <outlet property="helpButton" destination="RgT-gm-a2g" id="nru-4G-hqd"/>
+                <outlet property="lineView" destination="Vcg-2x-ovG" id="eAJ-1F-sCZ"/>
+                <outlet property="phoneNumberBtn" destination="kHv-pO-7Ul" id="Bm0-4q-Xdj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" alpha="0.20000000000000001" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcS-1a-faS">
+                    <rect key="frame" x="40" y="243.5" width="295" height="180"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9D-sp-HeI">
+                            <rect key="frame" x="0.0" y="120" width="295" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmh-BS-QbO">
+                                    <rect key="frame" x="20" y="17.5" width="255" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="Wa0-Lx-cuD"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                                    <state key="normal" title="取    消">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelClick:" destination="-1" eventType="touchUpInside" id="jsf-1g-jhS"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Gmh-BS-QbO" firstAttribute="centerX" secondItem="I9D-sp-HeI" secondAttribute="centerX" id="FC3-Bj-8aQ"/>
+                                <constraint firstItem="Gmh-BS-QbO" firstAttribute="centerY" secondItem="I9D-sp-HeI" secondAttribute="centerY" id="It9-gl-7KA"/>
+                                <constraint firstItem="Gmh-BS-QbO" firstAttribute="leading" secondItem="I9D-sp-HeI" secondAttribute="leading" constant="20" id="erU-pv-HTt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSP-gR-2pL">
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="120"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHv-pO-7Ul">
+                                    <rect key="frame" x="15" y="20" width="265" height="35"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="XM6-50-K1S"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                                    <state key="normal" title="手机号重置密码">
+                                        <color key="titleColor" red="0.20059275630000001" green="0.17736473680000001" blue="0.17241629959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="phoneNumberClick:" destination="-1" eventType="touchUpInside" id="gmc-HV-8ij"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vcg-2x-ovG">
+                                    <rect key="frame" x="30" y="59.5" width="235" height="1"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="rbv-2M-rbs"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgT-gm-a2g">
+                                    <rect key="frame" x="15" y="80" width="265" height="35"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                                    <state key="normal" title="帮助与反馈">
+                                        <color key="titleColor" red="0.2005927562713623" green="0.17736473679542542" blue="0.17241629958152771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="helpClcik:" destination="-1" eventType="touchUpInside" id="fBM-Gi-7im"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="RgT-gm-a2g" firstAttribute="top" secondItem="kHv-pO-7Ul" secondAttribute="bottom" constant="25" id="2z9-3I-uiv"/>
+                                <constraint firstItem="kHv-pO-7Ul" firstAttribute="top" secondItem="pSP-gR-2pL" secondAttribute="top" constant="20" id="6OS-qM-BNQ"/>
+                                <constraint firstItem="RgT-gm-a2g" firstAttribute="leading" secondItem="pSP-gR-2pL" secondAttribute="leading" constant="15" id="HiE-Op-KsJ"/>
+                                <constraint firstItem="Vcg-2x-ovG" firstAttribute="centerX" secondItem="pSP-gR-2pL" secondAttribute="centerX" id="IV3-3z-cjS"/>
+                                <constraint firstItem="RgT-gm-a2g" firstAttribute="height" secondItem="kHv-pO-7Ul" secondAttribute="height" id="RyZ-eQ-hMb"/>
+                                <constraint firstItem="Vcg-2x-ovG" firstAttribute="leading" secondItem="pSP-gR-2pL" secondAttribute="leading" constant="30" id="W3k-3O-C1c"/>
+                                <constraint firstItem="Vcg-2x-ovG" firstAttribute="centerY" secondItem="pSP-gR-2pL" secondAttribute="centerY" id="X0W-2L-84o"/>
+                                <constraint firstItem="RgT-gm-a2g" firstAttribute="width" secondItem="kHv-pO-7Ul" secondAttribute="width" id="XpX-IA-WA4"/>
+                                <constraint firstItem="kHv-pO-7Ul" firstAttribute="centerX" secondItem="pSP-gR-2pL" secondAttribute="centerX" id="cZo-WX-A9i"/>
+                                <constraint firstItem="RgT-gm-a2g" firstAttribute="centerX" secondItem="pSP-gR-2pL" secondAttribute="centerX" id="jod-eS-WJe"/>
+                                <constraint firstItem="kHv-pO-7Ul" firstAttribute="leading" secondItem="pSP-gR-2pL" secondAttribute="leading" constant="15" id="rfY-a5-17X"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="pSP-gR-2pL" firstAttribute="height" secondItem="pcS-1a-faS" secondAttribute="height" multiplier="2:3" id="2Hu-0C-ipU"/>
+                        <constraint firstItem="I9D-sp-HeI" firstAttribute="top" secondItem="pSP-gR-2pL" secondAttribute="bottom" id="Fjs-l8-prc"/>
+                        <constraint firstAttribute="height" constant="180" id="Pyh-Wl-cRB"/>
+                        <constraint firstAttribute="trailing" secondItem="I9D-sp-HeI" secondAttribute="trailing" id="S3i-Cl-fFK"/>
+                        <constraint firstAttribute="bottom" secondItem="I9D-sp-HeI" secondAttribute="bottom" id="VUG-HK-jXn"/>
+                        <constraint firstItem="pSP-gR-2pL" firstAttribute="top" secondItem="pcS-1a-faS" secondAttribute="top" id="VtZ-MC-ils"/>
+                        <constraint firstAttribute="trailing" secondItem="pSP-gR-2pL" secondAttribute="trailing" id="WwU-5c-d3J"/>
+                        <constraint firstItem="I9D-sp-HeI" firstAttribute="leading" secondItem="pcS-1a-faS" secondAttribute="leading" id="XZv-rX-yA3"/>
+                        <constraint firstItem="pSP-gR-2pL" firstAttribute="leading" secondItem="pcS-1a-faS" secondAttribute="leading" id="mUY-we-RYD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pcS-1a-faS" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="VlX-gD-gMK"/>
+                <constraint firstItem="pcS-1a-faS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="XlX-Tn-AtS"/>
+                <constraint firstItem="pcS-1a-faS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ssf-bc-kKc"/>
+            </constraints>
+            <point key="canvasLocation" x="-32.5" y="-136.5"/>
+        </view>
+    </objects>
+</document>

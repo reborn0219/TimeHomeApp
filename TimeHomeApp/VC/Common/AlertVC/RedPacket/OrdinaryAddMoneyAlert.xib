@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrdinaryAddMoneyAlert">
+            <connections>
+                <outlet property="closeBtn" destination="Lvj-YB-RR4" id="wTL-rC-lxf"/>
+                <outlet property="fixedBtn" destination="3Wg-sg-DP7" id="CcH-eE-58p"/>
+                <outlet property="moneyButtonBG" destination="fxa-3E-fpC" id="uEA-Zi-D9U"/>
+                <outlet property="okBtn" destination="dAT-3D-dir" id="dMV-MH-Mq8"/>
+                <outlet property="randomBtn" destination="fNs-cd-POw" id="eCk-SN-fsD"/>
+                <outlet property="showMessageLabel" destination="1K0-Sd-wFg" id="2dw-th-4hj"/>
+                <outlet property="theMoneyBG" destination="Nnw-27-x11" id="DHe-NJ-3Pn"/>
+                <outlet property="theMoneyTF" destination="Isa-gI-Ktz" id="Ubv-z6-LMA"/>
+                <outlet property="theMoneyTFToRight" destination="QBd-ZX-QPE" id="L03-kQ-SST"/>
+                <outlet property="theNumberBG" destination="tcc-7k-XU3" id="9pR-TI-xJP"/>
+                <outlet property="theNumberTF" destination="rPW-Ej-H3E" id="Cin-nB-I2X"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VsT-7T-8j0">
+                    <rect key="frame" x="16" y="203.5" width="343" height="260"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输 入 现 金" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vc-bu-1Zw">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                            <color key="backgroundColor" red="0.82352941176470584" green="0.11764705882352941" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="GWk-6B-6uk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcc-7k-XU3">
+                            <rect key="frame" x="8" y="55" width="327" height="30"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="红包个数最少10个" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rPW-Ej-H3E">
+                                    <rect key="frame" x="8" y="0.0" width="311" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="tfTextChange:" destination="-1" eventType="editingChanged" id="HsZ-Fo-mlU"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="rPW-Ej-H3E" secondAttribute="trailing" constant="8" id="DHo-u7-hA2"/>
+                                <constraint firstItem="rPW-Ej-H3E" firstAttribute="top" secondItem="tcc-7k-XU3" secondAttribute="top" id="Mct-Oc-v9n"/>
+                                <constraint firstItem="rPW-Ej-H3E" firstAttribute="leading" secondItem="tcc-7k-XU3" secondAttribute="leading" constant="8" id="hwa-74-9gT"/>
+                                <constraint firstAttribute="height" constant="30" id="nV0-nS-nab"/>
+                                <constraint firstAttribute="bottom" secondItem="rPW-Ej-H3E" secondAttribute="bottom" id="sTf-Px-xK0"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nnw-27-x11">
+                            <rect key="frame" x="8" y="100" width="327" height="30"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="红包总金额最少1元" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Isa-gI-Ktz">
+                                    <rect key="frame" x="8" y="0.0" width="256" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="tfTextChange:" destination="-1" eventType="editingChanged" id="kmZ-4s-dkp"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最少1元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1K0-Sd-wFg">
+                                    <rect key="frame" x="264" y="0.0" width="55" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="55" id="Uhu-w2-cF2"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="1K0-Sd-wFg" secondAttribute="bottom" id="3DV-R9-gvl"/>
+                                <constraint firstAttribute="trailing" secondItem="1K0-Sd-wFg" secondAttribute="trailing" constant="8" id="ANr-C0-WXo"/>
+                                <constraint firstItem="1K0-Sd-wFg" firstAttribute="top" secondItem="Nnw-27-x11" secondAttribute="top" id="MCz-CZ-hTl"/>
+                                <constraint firstAttribute="trailing" secondItem="Isa-gI-Ktz" secondAttribute="trailing" constant="63" id="QBd-ZX-QPE"/>
+                                <constraint firstItem="Isa-gI-Ktz" firstAttribute="top" secondItem="Nnw-27-x11" secondAttribute="top" id="QzU-30-GKO"/>
+                                <constraint firstAttribute="bottom" secondItem="Isa-gI-Ktz" secondAttribute="bottom" id="nwe-Oi-BGN"/>
+                                <constraint firstItem="Isa-gI-Ktz" firstAttribute="leading" secondItem="Nnw-27-x11" secondAttribute="leading" constant="8" id="yED-J5-z8m"/>
+                                <constraint firstAttribute="height" constant="30" id="zPO-P3-xf7"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxa-3E-fpC">
+                            <rect key="frame" x="16" y="140" width="311" height="25"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNs-cd-POw">
+                                    <rect key="frame" x="8" y="0.0" width="122.5" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="aum-fc-Hxb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                    <state key="normal" title="  随机金额" image="登陆注册-记住密码-勾选">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="randomBtnClick:" destination="-1" eventType="touchUpInside" id="SlD-7y-ZSB"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wg-sg-DP7">
+                                    <rect key="frame" x="180.5" y="0.0" width="122.5" height="25"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                    <state key="normal" title="  固定金额" image="登陆注册-记住密码-不勾选">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="fixedBtnClick:" destination="-1" eventType="touchUpInside" id="YMQ-IV-EVc"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="3Wg-sg-DP7" firstAttribute="height" secondItem="fNs-cd-POw" secondAttribute="height" id="3Xv-cL-SD0"/>
+                                <constraint firstItem="fNs-cd-POw" firstAttribute="top" secondItem="fxa-3E-fpC" secondAttribute="top" id="5P6-QD-Wkf"/>
+                                <constraint firstAttribute="trailing" secondItem="3Wg-sg-DP7" secondAttribute="trailing" constant="8" id="F6g-9C-ouf"/>
+                                <constraint firstItem="3Wg-sg-DP7" firstAttribute="top" secondItem="fxa-3E-fpC" secondAttribute="top" id="FIc-Ow-PQc"/>
+                                <constraint firstItem="fNs-cd-POw" firstAttribute="leading" secondItem="fxa-3E-fpC" secondAttribute="leading" constant="8" id="Gvs-ea-3i4"/>
+                                <constraint firstItem="3Wg-sg-DP7" firstAttribute="leading" secondItem="fNs-cd-POw" secondAttribute="trailing" constant="50" id="aHD-pb-QBH"/>
+                                <constraint firstItem="3Wg-sg-DP7" firstAttribute="width" secondItem="fNs-cd-POw" secondAttribute="width" id="pEl-3P-oQH"/>
+                                <constraint firstAttribute="height" constant="25" id="rws-R9-esJ"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAT-3D-dir">
+                            <rect key="frame" x="30" y="185" width="283" height="30"/>
+                            <color key="backgroundColor" red="0.82352941180000006" green="0.1176470588" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Ze1-9a-IXS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                            <state key="normal" title="确 定">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="okBtn:" destination="-1" eventType="touchUpInside" id="w5B-3V-CYy"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未领取的红包，将于24小时后退款至余额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKF-gC-L4m">
+                            <rect key="frame" x="0.0" y="225" width="343" height="25"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Nnw-27-x11" secondAttribute="trailing" constant="8" id="0bX-93-ckW"/>
+                        <constraint firstItem="tcc-7k-XU3" firstAttribute="leading" secondItem="VsT-7T-8j0" secondAttribute="leading" constant="8" id="9QP-9H-XF3"/>
+                        <constraint firstItem="fxa-3E-fpC" firstAttribute="top" secondItem="Nnw-27-x11" secondAttribute="bottom" constant="10" id="AD4-vG-plU"/>
+                        <constraint firstItem="UKF-gC-L4m" firstAttribute="leading" secondItem="VsT-7T-8j0" secondAttribute="leading" id="IbX-1d-bLq"/>
+                        <constraint firstItem="fxa-3E-fpC" firstAttribute="leading" secondItem="VsT-7T-8j0" secondAttribute="leading" constant="16" id="KgF-3f-knx"/>
+                        <constraint firstItem="tcc-7k-XU3" firstAttribute="top" secondItem="9Vc-bu-1Zw" secondAttribute="bottom" constant="15" id="MwT-uM-D0r"/>
+                        <constraint firstItem="Nnw-27-x11" firstAttribute="leading" secondItem="VsT-7T-8j0" secondAttribute="leading" constant="8" id="O7p-BD-ZoZ"/>
+                        <constraint firstItem="UKF-gC-L4m" firstAttribute="top" secondItem="dAT-3D-dir" secondAttribute="bottom" constant="10" id="QeG-6t-hKl"/>
+                        <constraint firstAttribute="trailing" secondItem="tcc-7k-XU3" secondAttribute="trailing" constant="8" id="U45-fp-Zqq"/>
+                        <constraint firstItem="9Vc-bu-1Zw" firstAttribute="top" secondItem="VsT-7T-8j0" secondAttribute="top" id="YWs-tf-N2y"/>
+                        <constraint firstItem="Nnw-27-x11" firstAttribute="top" secondItem="tcc-7k-XU3" secondAttribute="bottom" constant="15" id="at3-Bd-8qV"/>
+                        <constraint firstAttribute="trailing" secondItem="dAT-3D-dir" secondAttribute="trailing" constant="30" id="bN7-tV-VUt"/>
+                        <constraint firstAttribute="trailing" secondItem="UKF-gC-L4m" secondAttribute="trailing" id="dBY-yb-cMz"/>
+                        <constraint firstAttribute="trailing" secondItem="fxa-3E-fpC" secondAttribute="trailing" constant="16" id="g3n-jy-Wh9"/>
+                        <constraint firstAttribute="bottom" secondItem="UKF-gC-L4m" secondAttribute="bottom" constant="10" id="izm-ey-SgA"/>
+                        <constraint firstItem="dAT-3D-dir" firstAttribute="leading" secondItem="VsT-7T-8j0" secondAttribute="leading" constant="30" id="p2b-6N-ucU"/>
+                        <constraint firstAttribute="trailing" secondItem="9Vc-bu-1Zw" secondAttribute="trailing" id="tGZ-3b-5JV"/>
+                        <constraint firstItem="9Vc-bu-1Zw" firstAttribute="leading" secondItem="VsT-7T-8j0" secondAttribute="leading" id="wSc-Ru-haB"/>
+                        <constraint firstAttribute="height" constant="260" id="wfK-kQ-9eh"/>
+                        <constraint firstItem="dAT-3D-dir" firstAttribute="top" secondItem="fxa-3E-fpC" secondAttribute="bottom" constant="20" id="zdL-Nt-OSh"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvj-YB-RR4">
+                    <rect key="frame" x="162" y="488.5" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Ica-Ye-Hee"/>
+                        <constraint firstAttribute="height" constant="50" id="ffO-4c-cd3"/>
+                    </constraints>
+                    <state key="normal" image="弹窗关闭按钮-白"/>
+                    <connections>
+                        <action selector="closeBtnClick:" destination="-1" eventType="touchUpInside" id="Pbh-6O-yVM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Lvj-YB-RR4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="A4n-Z6-ZDG"/>
+                <constraint firstItem="Lvj-YB-RR4" firstAttribute="top" secondItem="VsT-7T-8j0" secondAttribute="bottom" constant="25" id="X8y-gq-uTe"/>
+                <constraint firstItem="VsT-7T-8j0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hkJ-tp-Nud"/>
+                <constraint firstItem="VsT-7T-8j0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="mz3-u4-ZBl"/>
+                <constraint firstItem="VsT-7T-8j0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="z0f-eI-Mnw"/>
+            </constraints>
+            <point key="canvasLocation" x="-106.5" y="38.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="弹窗关闭按钮-白" width="72" height="72"/>
+        <image name="登陆注册-记住密码-不勾选" width="12" height="12"/>
+        <image name="登陆注册-记住密码-勾选" width="12" height="12"/>
+    </resources>
+</document>

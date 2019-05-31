@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChangCityHreadCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChangCityHreadCell" id="Oqj-fu-w0V" customClass="ChangCityHreadCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oqj-fu-w0V" id="OQ4-it-BeH">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="入驻小区_选择城市_推荐城市" translatesAutoresizingMaskIntoConstraints="NO" id="vFz-qY-wEJ">
+                        <rect key="frame" x="10" y="20" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="1Gz-wX-YGI"/>
+                            <constraint firstAttribute="height" constant="30" id="KOf-Am-83v"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iP4-Vm-ydR">
+                        <rect key="frame" x="45" y="20" width="265" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="aoz-Nc-otg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOf-zA-eGu">
+                        <rect key="frame" x="10" y="60" width="300" height="1"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="KdZ-I1-xdv"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpg-Lb-aHq">
+                        <rect key="frame" x="10" y="71" width="68" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="ZGK-vU-lbZ"/>
+                        </constraints>
+                        <state key="normal">
+                            <color key="titleColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                <color key="value" red="0.34901960784313724" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="btn_OneEvent:" destination="Oqj-fu-w0V" eventType="touchUpInside" id="QLL-Kg-kLG"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="103" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8z8-mC-wEN">
+                        <rect key="frame" x="242" y="71" width="68" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="UXw-ev-gTT"/>
+                        </constraints>
+                        <state key="normal">
+                            <color key="titleColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                <color key="value" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="btn_FourEvent:" destination="Oqj-fu-w0V" eventType="touchUpInside" id="wVs-pK-Aui"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="101" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mr9-nh-UFJ">
+                        <rect key="frame" x="87" y="71" width="68" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="zEG-u0-85Q"/>
+                        </constraints>
+                        <state key="normal">
+                            <color key="titleColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                <color key="value" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="btn_TwoEvent:" destination="Oqj-fu-w0V" eventType="touchUpInside" id="wx5-C0-MBx"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="102" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOa-XS-vv6">
+                        <rect key="frame" x="165" y="71" width="67" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="PTb-cO-5YJ"/>
+                        </constraints>
+                        <state key="normal">
+                            <color key="titleColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                <color key="value" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="btn_ThreeEvent:" destination="Oqj-fu-w0V" eventType="touchUpInside" id="Hlf-8T-H7b"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="8z8-mC-wEN" secondAttribute="trailing" constant="10" id="1JU-3u-egQ"/>
+                    <constraint firstItem="8z8-mC-wEN" firstAttribute="width" secondItem="bpg-Lb-aHq" secondAttribute="width" id="32N-vX-XBN"/>
+                    <constraint firstItem="vFz-qY-wEJ" firstAttribute="leading" secondItem="OQ4-it-BeH" secondAttribute="leading" constant="10" id="4KS-gp-yUp"/>
+                    <constraint firstItem="iP4-Vm-ydR" firstAttribute="top" secondItem="OQ4-it-BeH" secondAttribute="top" constant="20" id="7QE-Lc-6os"/>
+                    <constraint firstItem="Mr9-nh-UFJ" firstAttribute="leading" secondItem="bpg-Lb-aHq" secondAttribute="trailing" constant="10" id="8nd-Kw-eTI"/>
+                    <constraint firstItem="8z8-mC-wEN" firstAttribute="leading" secondItem="iOa-XS-vv6" secondAttribute="trailing" constant="10" id="9pI-B1-7gs"/>
+                    <constraint firstItem="vFz-qY-wEJ" firstAttribute="top" secondItem="OQ4-it-BeH" secondAttribute="top" constant="20" id="AsG-5O-us6"/>
+                    <constraint firstItem="iOa-XS-vv6" firstAttribute="width" secondItem="bpg-Lb-aHq" secondAttribute="width" id="FOg-2q-yYP"/>
+                    <constraint firstItem="iOa-XS-vv6" firstAttribute="top" secondItem="TOf-zA-eGu" secondAttribute="bottom" constant="10" id="K0H-yt-kgp"/>
+                    <constraint firstItem="bpg-Lb-aHq" firstAttribute="leading" secondItem="OQ4-it-BeH" secondAttribute="leading" constant="10" id="M5s-TC-jsm"/>
+                    <constraint firstItem="TOf-zA-eGu" firstAttribute="top" secondItem="iP4-Vm-ydR" secondAttribute="bottom" constant="10" id="Pel-Ud-5VF"/>
+                    <constraint firstItem="bpg-Lb-aHq" firstAttribute="top" secondItem="TOf-zA-eGu" secondAttribute="bottom" constant="10" id="W8C-xY-TFb"/>
+                    <constraint firstAttribute="trailing" secondItem="iP4-Vm-ydR" secondAttribute="trailing" constant="10" id="Yb5-Z2-NZv"/>
+                    <constraint firstItem="iP4-Vm-ydR" firstAttribute="leading" secondItem="vFz-qY-wEJ" secondAttribute="trailing" constant="5" id="a2H-fT-FHZ"/>
+                    <constraint firstAttribute="trailing" secondItem="TOf-zA-eGu" secondAttribute="trailing" constant="10" id="aSi-f0-CgJ"/>
+                    <constraint firstItem="Mr9-nh-UFJ" firstAttribute="width" secondItem="bpg-Lb-aHq" secondAttribute="width" id="adr-AR-A5m"/>
+                    <constraint firstItem="iOa-XS-vv6" firstAttribute="leading" secondItem="Mr9-nh-UFJ" secondAttribute="trailing" constant="10" id="blQ-qc-E2O"/>
+                    <constraint firstItem="8z8-mC-wEN" firstAttribute="top" secondItem="TOf-zA-eGu" secondAttribute="bottom" constant="10" id="gfL-Cc-LR2"/>
+                    <constraint firstItem="Mr9-nh-UFJ" firstAttribute="top" secondItem="TOf-zA-eGu" secondAttribute="bottom" constant="10" id="qAw-0Y-j9b"/>
+                    <constraint firstItem="TOf-zA-eGu" firstAttribute="leading" secondItem="OQ4-it-BeH" secondAttribute="leading" constant="10" id="rxe-AA-iau"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btn_Four" destination="8z8-mC-wEN" id="acs-8Z-IvZ"/>
+                <outlet property="btn_One" destination="bpg-Lb-aHq" id="X7U-JE-jBd"/>
+                <outlet property="btn_Three" destination="iOa-XS-vv6" id="qL4-6w-F4M"/>
+                <outlet property="btn_Two" destination="Mr9-nh-UFJ" id="mqO-Go-QjZ"/>
+            </connections>
+            <point key="canvasLocation" x="278" y="213"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="入驻小区_选择城市_推荐城市" width="23" height="23"/>
+    </resources>
+</document>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZSY_GearbBoxesAlertVC">
+            <connections>
+                <outlet property="bgView" destination="82s-Tc-PXD" id="cp0-bG-Nbp"/>
+                <outlet property="closeButton" destination="ge8-au-mYh" id="q4c-pn-Ud9"/>
+                <outlet property="height" destination="JGs-6G-JtY" id="JVg-lx-kif"/>
+                <outlet property="leftLabel" destination="W9R-IG-XJD" id="1Bk-ul-kzP"/>
+                <outlet property="tableView" destination="98K-z1-M6J" id="Lfn-JY-4iT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="82s-Tc-PXD">
+                    <rect key="frame" x="35" y="72" width="530" height="300"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="变速箱类型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9R-IG-XJD">
+                            <rect key="frame" x="10" y="8" width="70" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="kMh-rj-VBH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" red="0.58823529411764708" green="0.066666666666666666" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A95-du-7pT">
+                            <rect key="frame" x="6" y="37" width="518" height="1"/>
+                            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="w6d-gB-9Tp"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge8-au-mYh">
+                            <rect key="frame" x="505" y="11" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="8NO-v1-hwl"/>
+                                <constraint firstAttribute="width" constant="15" id="ZK2-jF-OD9"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="汽车管家-车况检测-异常图标"/>
+                            <connections>
+                                <action selector="closeButton:" destination="-1" eventType="touchUpInside" id="uuE-kR-C9A"/>
+                            </connections>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="98K-z1-M6J">
+                            <rect key="frame" x="0.0" y="46" width="530" height="254"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="254" id="JGs-6G-JtY"/>
+                            </constraints>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="98K-z1-M6J" secondAttribute="trailing" id="0fL-qf-YYv"/>
+                        <constraint firstItem="98K-z1-M6J" firstAttribute="top" secondItem="A95-du-7pT" secondAttribute="bottom" constant="8" id="327-vV-tvd"/>
+                        <constraint firstAttribute="trailing" secondItem="A95-du-7pT" secondAttribute="trailing" constant="6" id="Ezk-R4-R6H"/>
+                        <constraint firstAttribute="height" constant="300" id="F5Z-Ab-GUY"/>
+                        <constraint firstItem="W9R-IG-XJD" firstAttribute="leading" secondItem="82s-Tc-PXD" secondAttribute="leading" constant="10" id="KEI-Fp-iHa"/>
+                        <constraint firstItem="A95-du-7pT" firstAttribute="leading" secondItem="82s-Tc-PXD" secondAttribute="leading" constant="6" id="XMj-G7-wCc"/>
+                        <constraint firstItem="ge8-au-mYh" firstAttribute="top" secondItem="82s-Tc-PXD" secondAttribute="top" constant="11" id="aij-IM-wkS"/>
+                        <constraint firstItem="A95-du-7pT" firstAttribute="top" secondItem="W9R-IG-XJD" secondAttribute="bottom" constant="8" id="frC-pE-VoP"/>
+                        <constraint firstItem="98K-z1-M6J" firstAttribute="leading" secondItem="82s-Tc-PXD" secondAttribute="leading" id="lEX-58-KIo"/>
+                        <constraint firstAttribute="trailing" secondItem="ge8-au-mYh" secondAttribute="trailing" constant="10" id="lK6-Xz-2hC"/>
+                        <constraint firstItem="W9R-IG-XJD" firstAttribute="top" secondItem="82s-Tc-PXD" secondAttribute="top" constant="8" id="tqV-kB-SIm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="82s-Tc-PXD" secondAttribute="trailing" constant="35" id="XbB-6D-jZ3"/>
+                <constraint firstItem="82s-Tc-PXD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="oih-6Q-O8X"/>
+                <constraint firstItem="82s-Tc-PXD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="pJI-E8-hws"/>
+            </constraints>
+            <point key="canvasLocation" x="826" y="294"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="汽车管家-车况检测-异常图标" width="14" height="14"/>
+    </resources>
+</document>

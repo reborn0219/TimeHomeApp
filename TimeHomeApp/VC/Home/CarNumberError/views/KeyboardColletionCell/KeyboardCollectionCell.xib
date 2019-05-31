@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="KeyboardCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUW-0B-Vog">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="添加车牌_输入框删除" translatesAutoresizingMaskIntoConstraints="NO" id="xGc-xu-0K1">
+                        <rect key="frame" x="12.5" y="16.5" width="25" height="17"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="RF7-v2-3Tz"/>
+                            <constraint firstAttribute="height" constant="17" id="iDy-6i-CJI"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JUW-0B-Vog" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0y5-UX-7v9"/>
+                <constraint firstItem="JUW-0B-Vog" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="BZn-5C-17s"/>
+                <constraint firstItem="xGc-xu-0K1" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="HMA-mR-WIa"/>
+                <constraint firstAttribute="bottom" secondItem="JUW-0B-Vog" secondAttribute="bottom" id="J1C-KS-0XF"/>
+                <constraint firstAttribute="trailing" secondItem="JUW-0B-Vog" secondAttribute="trailing" id="u8O-MO-rhw"/>
+                <constraint firstItem="xGc-xu-0K1" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="zZ0-zW-KCM"/>
+            </constraints>
+            <connections>
+                <outlet property="contentLb" destination="JUW-0B-Vog" id="twT-tG-oGd"/>
+                <outlet property="deleteImg" destination="xGc-xu-0K1" id="gBn-TX-SoB"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="添加车牌_输入框删除" width="25" height="17"/>
+    </resources>
+</document>

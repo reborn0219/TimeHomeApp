@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ContactServiceCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactServiceCell" id="tbQ-Wv-eYm" customClass="ContactServiceCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tbQ-Wv-eYm" id="4yI-LI-EzL">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="74.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ui-rL-cwx">
+                        <rect key="frame" x="10" y="8" width="300" height="66.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="联系物业-物业" translatesAutoresizingMaskIntoConstraints="NO" id="vRe-UO-bqW">
+                                <rect key="frame" x="10" y="21" width="26" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="ESe-D4-fxd"/>
+                                    <constraint firstAttribute="height" constant="25" id="ez7-oP-DxO"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdF-sI-Ale">
+                                <rect key="frame" x="245" y="0.0" width="45" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="Se0-9h-zWO"/>
+                                </constraints>
+                                <state key="normal" image="联系物业-电话"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88G-6b-OYG">
+                                <rect key="frame" x="239" y="10" width="1" height="46"/>
+                                <color key="backgroundColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="45d-Mx-61F"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1339139139" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNC-P3-SLB">
+                                <rect key="frame" x="46" y="41" width="80" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="04W-QA-m2b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总服务台" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42s-Lr-ZvJ">
+                                <rect key="frame" x="46" y="8" width="188" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="BDN-hF-cVN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恒辉物业" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2Q-yb-haF">
+                                <rect key="frame" x="141" y="40" width="57.5" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="Fxw-Aw-pPa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVv-HH-17L">
+                                <rect key="frame" x="136" y="39.5" width="67.5" height="18"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="aXK-tA-Lls"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="42s-Lr-ZvJ" firstAttribute="top" secondItem="1Ui-rL-cwx" secondAttribute="top" constant="8" id="2Zs-jG-s3v"/>
+                            <constraint firstItem="vRe-UO-bqW" firstAttribute="leading" secondItem="1Ui-rL-cwx" secondAttribute="leading" constant="10" id="6yv-OV-PwM"/>
+                            <constraint firstItem="ZdF-sI-Ale" firstAttribute="leading" secondItem="88G-6b-OYG" secondAttribute="trailing" constant="5" id="8Hb-Rp-9yt"/>
+                            <constraint firstItem="LNC-P3-SLB" firstAttribute="top" secondItem="42s-Lr-ZvJ" secondAttribute="bottom" constant="8" id="C6g-44-QaO"/>
+                            <constraint firstItem="88G-6b-OYG" firstAttribute="leading" secondItem="42s-Lr-ZvJ" secondAttribute="trailing" constant="5" id="Fgn-eQ-byv"/>
+                            <constraint firstItem="88G-6b-OYG" firstAttribute="top" secondItem="1Ui-rL-cwx" secondAttribute="top" constant="10" id="K9Y-My-tXt"/>
+                            <constraint firstAttribute="bottom" secondItem="88G-6b-OYG" secondAttribute="bottom" constant="10" id="OoO-F9-duk"/>
+                            <constraint firstItem="vRe-UO-bqW" firstAttribute="centerY" secondItem="1Ui-rL-cwx" secondAttribute="centerY" id="Ota-3w-DXM"/>
+                            <constraint firstItem="42s-Lr-ZvJ" firstAttribute="leading" secondItem="vRe-UO-bqW" secondAttribute="trailing" constant="10" id="Qxg-GG-l9I"/>
+                            <constraint firstItem="n2Q-yb-haF" firstAttribute="leading" secondItem="LNC-P3-SLB" secondAttribute="trailing" constant="15" id="WDX-AN-ZYl"/>
+                            <constraint firstItem="n2Q-yb-haF" firstAttribute="top" secondItem="LNC-P3-SLB" secondAttribute="top" constant="-1" id="cT5-cc-MDZ"/>
+                            <constraint firstItem="LNC-P3-SLB" firstAttribute="leading" secondItem="42s-Lr-ZvJ" secondAttribute="leading" id="fSU-Rf-0tR"/>
+                            <constraint firstItem="ZdF-sI-Ale" firstAttribute="top" secondItem="1Ui-rL-cwx" secondAttribute="top" id="fVi-kz-BMN"/>
+                            <constraint firstAttribute="trailing" secondItem="ZdF-sI-Ale" secondAttribute="trailing" constant="10" id="hxc-q9-tbx"/>
+                            <constraint firstAttribute="bottom" secondItem="ZdF-sI-Ale" secondAttribute="bottom" id="jZI-iw-5j9"/>
+                            <constraint firstItem="SVv-HH-17L" firstAttribute="leading" secondItem="LNC-P3-SLB" secondAttribute="trailing" constant="10" id="mak-X7-ZNn"/>
+                            <constraint firstItem="SVv-HH-17L" firstAttribute="centerY" secondItem="LNC-P3-SLB" secondAttribute="centerY" id="ohT-uO-r6E"/>
+                            <constraint firstItem="SVv-HH-17L" firstAttribute="trailing" secondItem="n2Q-yb-haF" secondAttribute="trailing" constant="5" id="sLQ-K7-Bys"/>
+                            <constraint firstItem="88G-6b-OYG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="n2Q-yb-haF" secondAttribute="trailing" constant="8" id="zyD-SL-a2X"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="1Ui-rL-cwx" secondAttribute="bottom" id="SKr-PC-AAX"/>
+                    <constraint firstAttribute="trailing" secondItem="1Ui-rL-cwx" secondAttribute="trailing" constant="10" id="gsL-Gs-Ceb"/>
+                    <constraint firstItem="1Ui-rL-cwx" firstAttribute="leading" secondItem="4yI-LI-EzL" secondAttribute="leading" constant="10" id="hQh-uB-VcQ"/>
+                    <constraint firstItem="1Ui-rL-cwx" firstAttribute="top" secondItem="4yI-LI-EzL" secondAttribute="top" constant="8" id="t9j-hx-LZr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lab_Name" destination="42s-Lr-ZvJ" id="OuY-7w-eQT"/>
+                <outlet property="lab_Phone" destination="LNC-P3-SLB" id="6EG-Wy-sde"/>
+                <outlet property="propertyBgView" destination="SVv-HH-17L" id="FCi-Nv-Q8E"/>
+                <outlet property="property_Label" destination="n2Q-yb-haF" id="AgL-T7-jb9"/>
+                <outlet property="rightBtn" destination="ZdF-sI-Ale" id="AvU-df-p12"/>
+            </connections>
+            <point key="canvasLocation" x="569" y="-31.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="联系物业-物业" width="17" height="20"/>
+        <image name="联系物业-电话" width="26" height="26"/>
+    </resources>
+</document>

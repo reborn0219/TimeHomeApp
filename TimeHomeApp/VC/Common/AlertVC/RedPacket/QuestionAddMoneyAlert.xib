@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionAddMoneyAlert">
+            <connections>
+                <outlet property="closeButton" destination="qSj-m8-QWa" id="V4Y-M4-YmD"/>
+                <outlet property="moneyTf" destination="GBW-tD-pyU" id="fMS-zv-dLC"/>
+                <outlet property="okButton" destination="X48-9P-Zqf" id="ved-ea-n0j"/>
+                <outlet property="textFieldBG" destination="Ht1-b6-Oas" id="oGU-Gh-Tca"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOS-OG-aNF">
+                    <rect key="frame" x="16" y="159" width="288" height="250"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输 入 现 金" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUW-CT-hQ8">
+                            <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
+                            <color key="backgroundColor" red="0.82352941176470584" green="0.11764705882352941" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Kv3-re-q4g"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht1-b6-Oas">
+                            <rect key="frame" x="8" y="80" width="272" height="35"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="奖励金额最少1元" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GBW-tD-pyU">
+                                    <rect key="frame" x="8" y="0.0" width="256" height="35"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="GBW-tD-pyU" secondAttribute="trailing" constant="8" id="VH5-ry-xsS"/>
+                                <constraint firstAttribute="height" constant="35" id="oUd-cX-hjd"/>
+                                <constraint firstItem="GBW-tD-pyU" firstAttribute="leading" secondItem="Ht1-b6-Oas" secondAttribute="leading" constant="8" id="sfE-By-NoG"/>
+                                <constraint firstItem="GBW-tD-pyU" firstAttribute="top" secondItem="Ht1-b6-Oas" secondAttribute="top" id="udt-8B-xpf"/>
+                                <constraint firstAttribute="bottom" secondItem="GBW-tD-pyU" secondAttribute="bottom" id="wUy-nl-p76"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X48-9P-Zqf">
+                            <rect key="frame" x="30" y="155" width="228" height="40"/>
+                            <color key="backgroundColor" red="0.82352941176470584" green="0.11764705882352941" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="cVb-Oz-TVP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                            <state key="normal" title="确 定">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="okButtonClick:" destination="-1" eventType="touchUpInside" id="sa2-ex-89S"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="奖励将发给您选的最佳答案的用户呦!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTU-Mj-FOz">
+                            <rect key="frame" x="0.0" y="210" width="288" height="25"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="3xu-LH-MYK"/>
+                        <constraint firstAttribute="bottom" secondItem="eTU-Mj-FOz" secondAttribute="bottom" constant="15" id="Cp2-UM-5Az"/>
+                        <constraint firstAttribute="trailing" secondItem="eTU-Mj-FOz" secondAttribute="trailing" id="I6f-r7-lJL"/>
+                        <constraint firstItem="AUW-CT-hQ8" firstAttribute="top" secondItem="hOS-OG-aNF" secondAttribute="top" id="LWW-Fq-odN"/>
+                        <constraint firstItem="X48-9P-Zqf" firstAttribute="leading" secondItem="hOS-OG-aNF" secondAttribute="leading" constant="30" id="Qvt-VW-Xzx"/>
+                        <constraint firstAttribute="trailing" secondItem="AUW-CT-hQ8" secondAttribute="trailing" id="SQe-PS-fsh"/>
+                        <constraint firstItem="X48-9P-Zqf" firstAttribute="top" secondItem="Ht1-b6-Oas" secondAttribute="bottom" constant="40" id="aWw-pK-jFz"/>
+                        <constraint firstItem="eTU-Mj-FOz" firstAttribute="top" secondItem="X48-9P-Zqf" secondAttribute="bottom" constant="15" id="cyh-eR-Cjl"/>
+                        <constraint firstItem="eTU-Mj-FOz" firstAttribute="leading" secondItem="hOS-OG-aNF" secondAttribute="leading" id="f9J-J4-aaX"/>
+                        <constraint firstItem="Ht1-b6-Oas" firstAttribute="top" secondItem="AUW-CT-hQ8" secondAttribute="bottom" constant="40" id="gyv-Fi-qKg"/>
+                        <constraint firstAttribute="trailing" secondItem="Ht1-b6-Oas" secondAttribute="trailing" constant="8" id="kmG-t7-3wV"/>
+                        <constraint firstItem="AUW-CT-hQ8" firstAttribute="leading" secondItem="hOS-OG-aNF" secondAttribute="leading" id="prW-Fs-DhR"/>
+                        <constraint firstAttribute="trailing" secondItem="X48-9P-Zqf" secondAttribute="trailing" constant="30" id="uKu-bf-Qu1"/>
+                        <constraint firstItem="Ht1-b6-Oas" firstAttribute="leading" secondItem="hOS-OG-aNF" secondAttribute="leading" constant="8" id="z5M-Wq-BqF"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSj-m8-QWa">
+                    <rect key="frame" x="135" y="434" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Jui-QG-DJb"/>
+                        <constraint firstAttribute="width" constant="50" id="bjB-9Q-x1D"/>
+                    </constraints>
+                    <state key="normal" image="弹窗关闭按钮-白"/>
+                    <connections>
+                        <action selector="closeButtonClick:" destination="-1" eventType="touchUpInside" id="exe-jJ-vpo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="hOS-OG-aNF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="3gQ-ps-Jwd"/>
+                <constraint firstItem="qSj-m8-QWa" firstAttribute="top" secondItem="hOS-OG-aNF" secondAttribute="bottom" constant="25" id="Bho-nv-tsw"/>
+                <constraint firstItem="qSj-m8-QWa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c1H-m0-7aI"/>
+                <constraint firstItem="hOS-OG-aNF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="vTR-X6-lZy"/>
+                <constraint firstItem="hOS-OG-aNF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="va3-ER-hlw"/>
+            </constraints>
+            <point key="canvasLocation" x="-42" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="弹窗关闭按钮-白" width="72" height="72"/>
+    </resources>
+</document>

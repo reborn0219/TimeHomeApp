@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZSY_PickerViewVC">
+            <connections>
+                <outlet property="okButton" destination="K0J-KG-ra0" id="Erh-Uo-Q5L"/>
+                <outlet property="pickerView" destination="vLt-yK-RlW" id="Uob-BT-1sh"/>
+                <outlet property="redView" destination="41V-md-XCR" id="3Lw-gV-lAP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGA-Tq-qGz">
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLt-yK-RlW">
+                            <color key="backgroundColor" red="0.80622220039367676" green="0.81037014722824097" blue="0.80985230207443237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </pickerView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0J-KG-ra0">
+                            <color key="backgroundColor" red="0.78838628529999999" green="0.10799606890000001" blue="0.1125928834" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="mxa-49-Sz3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                            <state key="normal" title="确    定">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="okButtonClick:" destination="-1" eventType="touchUpInside" id="dQz-uQ-r3S"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41V-md-XCR">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="5" id="HsU-07-saF"/>
+                                <constraint firstAttribute="height" constant="20" id="m0B-o2-jip"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="K0J-KG-ra0" firstAttribute="leading" secondItem="tGA-Tq-qGz" secondAttribute="leading" constant="10" id="095-tr-6jT"/>
+                        <constraint firstAttribute="height" constant="230" id="1bt-in-MdR"/>
+                        <constraint firstItem="41V-md-XCR" firstAttribute="centerY" secondItem="tGA-Tq-qGz" secondAttribute="centerY" constant="-14" id="Acw-0A-TGX"/>
+                        <constraint firstItem="vLt-yK-RlW" firstAttribute="top" secondItem="tGA-Tq-qGz" secondAttribute="top" constant="10" id="Y8S-UQ-t7H"/>
+                        <constraint firstItem="K0J-KG-ra0" firstAttribute="top" secondItem="vLt-yK-RlW" secondAttribute="bottom" constant="10" id="bq4-gO-Fx0"/>
+                        <constraint firstAttribute="bottom" secondItem="vLt-yK-RlW" secondAttribute="bottom" constant="40" id="elG-Rz-eDt"/>
+                        <constraint firstAttribute="trailing" secondItem="K0J-KG-ra0" secondAttribute="trailing" constant="10" id="i5Y-Kb-q6T"/>
+                        <constraint firstItem="vLt-yK-RlW" firstAttribute="leading" secondItem="tGA-Tq-qGz" secondAttribute="leading" constant="10" id="igz-Yu-hwK"/>
+                        <constraint firstItem="41V-md-XCR" firstAttribute="leading" secondItem="tGA-Tq-qGz" secondAttribute="leading" constant="8" id="oFT-vE-uGl"/>
+                        <constraint firstAttribute="trailing" secondItem="vLt-yK-RlW" secondAttribute="trailing" constant="10" id="qcV-GP-AZs"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tGA-Tq-qGz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="JNC-uE-QJd"/>
+                <constraint firstItem="tGA-Tq-qGz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TV9-VF-GxZ"/>
+                <constraint firstItem="tGA-Tq-qGz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eZ9-Mc-mkk"/>
+            </constraints>
+            <point key="canvasLocation" x="-364.5" y="24.5"/>
+        </view>
+    </objects>
+</document>

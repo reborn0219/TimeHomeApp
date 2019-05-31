@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZSY_FuelVC">
+            <connections>
+                <outlet property="bgView" destination="B44-c3-oWS" id="f1a-in-eJw"/>
+                <outlet property="closeButton" destination="TEW-nq-WcC" id="G5b-Wt-4qv"/>
+                <outlet property="lineView" destination="jcN-zN-Ce9" id="ZB9-Pw-YPD"/>
+                <outlet property="tableView" destination="6U6-Kd-2vM" id="EPf-mR-hUz"/>
+                <outlet property="titleLabel" destination="G9R-yQ-ZyI" id="53W-c7-f1O"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" alpha="0.5" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B44-c3-oWS">
+                    <rect key="frame" x="40" y="185" width="520" height="230"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="燃油类型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9R-yQ-ZyI">
+                            <rect key="frame" x="8" y="8" width="56" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="oC2-EF-eBQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" red="0.55294117647058827" green="0.0" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEW-nq-WcC">
+                            <rect key="frame" x="497" y="8" width="15" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="LGc-18-NYd"/>
+                            </constraints>
+                            <state key="normal" image="汽车管家-车况检测-异常图标"/>
+                            <connections>
+                                <action selector="closeButton:" destination="-1" eventType="touchUpInside" id="KA0-kq-Ocg"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcN-zN-Ce9">
+                            <rect key="frame" x="5" y="34" width="510" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="P1d-fP-Mcp"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6U6-Kd-2vM">
+                            <rect key="frame" x="8" y="40" width="504" height="190"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="TEW-nq-WcC" firstAttribute="top" secondItem="B44-c3-oWS" secondAttribute="top" constant="8" id="4Qt-RW-1gm"/>
+                        <constraint firstItem="6U6-Kd-2vM" firstAttribute="leading" secondItem="B44-c3-oWS" secondAttribute="leading" constant="8" id="6ow-XG-Zoj"/>
+                        <constraint firstItem="G9R-yQ-ZyI" firstAttribute="leading" secondItem="B44-c3-oWS" secondAttribute="leading" constant="8" id="ArP-dp-qcB"/>
+                        <constraint firstItem="G9R-yQ-ZyI" firstAttribute="top" secondItem="B44-c3-oWS" secondAttribute="top" constant="8" id="G8m-V2-Cxu"/>
+                        <constraint firstAttribute="trailing" secondItem="TEW-nq-WcC" secondAttribute="trailing" constant="8" id="Iem-de-tRV"/>
+                        <constraint firstItem="jcN-zN-Ce9" firstAttribute="leading" secondItem="B44-c3-oWS" secondAttribute="leading" constant="5" id="K0t-pw-Ykw"/>
+                        <constraint firstItem="jcN-zN-Ce9" firstAttribute="top" secondItem="TEW-nq-WcC" secondAttribute="bottom" constant="5" id="Ls3-ol-p18"/>
+                        <constraint firstAttribute="bottom" secondItem="6U6-Kd-2vM" secondAttribute="bottom" id="QlD-r6-TZP"/>
+                        <constraint firstItem="6U6-Kd-2vM" firstAttribute="top" secondItem="jcN-zN-Ce9" secondAttribute="bottom" constant="5" id="W6r-7z-Jrf"/>
+                        <constraint firstAttribute="trailing" secondItem="6U6-Kd-2vM" secondAttribute="trailing" constant="8" id="WaT-cT-TYi"/>
+                        <constraint firstAttribute="trailing" secondItem="jcN-zN-Ce9" secondAttribute="trailing" constant="5" id="XnJ-nR-0fA"/>
+                        <constraint firstAttribute="height" constant="230" id="cWv-hT-eRK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.80075431034482758" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="B44-c3-oWS" secondAttribute="trailing" constant="40" id="EV6-0Y-i0V"/>
+                <constraint firstItem="B44-c3-oWS" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GHA-Wa-ogm"/>
+                <constraint firstItem="B44-c3-oWS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="PhP-Pz-Loc"/>
+            </constraints>
+            <point key="canvasLocation" x="305" y="228"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="汽车管家-车况检测-异常图标" width="15" height="15"/>
+    </resources>
+</document>

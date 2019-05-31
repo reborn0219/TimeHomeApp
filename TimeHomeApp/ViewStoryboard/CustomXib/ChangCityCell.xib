@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChangCityCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChangCityCell" id="gtd-b2-p1Q" customClass="ChangCityCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gtd-b2-p1Q" id="g3r-Zw-Nb6">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fNM-kz-Syr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJv-lX-dR9">
+                                <rect key="frame" x="10" y="5" width="300" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qJv-lX-dR9" firstAttribute="top" secondItem="fNM-kz-Syr" secondAttribute="top" constant="5" id="CA1-P1-fHj"/>
+                            <constraint firstAttribute="trailing" secondItem="qJv-lX-dR9" secondAttribute="trailing" constant="10" id="IVT-8U-RVU"/>
+                            <constraint firstAttribute="bottom" secondItem="qJv-lX-dR9" secondAttribute="bottom" constant="5" id="d14-lc-Uxc"/>
+                            <constraint firstItem="qJv-lX-dR9" firstAttribute="leading" secondItem="fNM-kz-Syr" secondAttribute="leading" constant="10" id="djh-De-GWR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="fNM-kz-Syr" firstAttribute="leading" secondItem="g3r-Zw-Nb6" secondAttribute="leading" id="54U-xt-Bl5"/>
+                    <constraint firstAttribute="bottom" secondItem="fNM-kz-Syr" secondAttribute="bottom" id="EFV-Ys-sTg"/>
+                    <constraint firstAttribute="trailing" secondItem="fNM-kz-Syr" secondAttribute="trailing" id="HRC-Cx-qbI"/>
+                    <constraint firstItem="fNM-kz-Syr" firstAttribute="top" secondItem="g3r-Zw-Nb6" secondAttribute="top" id="WAh-Oj-D0w"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lab_City" destination="qJv-lX-dR9" id="pqT-5M-N8I"/>
+            </connections>
+            <point key="canvasLocation" x="297" y="116"/>
+        </tableViewCell>
+    </objects>
+</document>

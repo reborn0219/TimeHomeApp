@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="L_NormalDetailForthTVC">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UzJ-kt-zvX">
+                        <rect key="frame" x="311" y="5" width="1" height="39"/>
+                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="GJL-Tn-bZ4"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="赞" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7S-9e-AUP">
+                        <rect key="frame" x="292" y="27" width="14" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14.5" id="X0n-i0-rYa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZ5-aB-wNh">
+                        <rect key="frame" x="289" y="5" width="17" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="邻趣-详情页-点赞图标-灰-拷贝" translatesAutoresizingMaskIntoConstraints="NO" id="dgN-AD-hwP">
+                        <rect key="frame" x="264" y="3" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="TaR-6g-O7q"/>
+                            <constraint firstAttribute="height" constant="20" id="dcE-Vz-WXR"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjQ-3g-xAV">
+                        <rect key="frame" x="250" y="0.0" width="70" height="49"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="ku4-8h-4xY"/>
+                        </constraints>
+                        <connections>
+                            <action selector="praiseButtonDidTouch:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6y2-aH-ET7"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="10000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey0-Wb-Ofc">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="UzJ-kt-zvX" secondAttribute="trailing" constant="8" id="3i0-gk-WHy"/>
+                    <constraint firstAttribute="bottom" secondItem="UzJ-kt-zvX" secondAttribute="bottom" constant="5" id="5Sl-Gt-A7j"/>
+                    <constraint firstItem="Ey0-Wb-Ofc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="FGo-Gp-FEu"/>
+                    <constraint firstItem="GjQ-3g-xAV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MHr-PQ-GKg"/>
+                    <constraint firstItem="UzJ-kt-zvX" firstAttribute="leading" secondItem="iZ5-aB-wNh" secondAttribute="trailing" constant="5" id="OEd-5W-Gy5"/>
+                    <constraint firstItem="GjQ-3g-xAV" firstAttribute="leading" secondItem="Ey0-Wb-Ofc" secondAttribute="trailing" id="R6f-7W-zAN"/>
+                    <constraint firstItem="iZ5-aB-wNh" firstAttribute="top" secondItem="UzJ-kt-zvX" secondAttribute="top" id="UaJ-9M-giN"/>
+                    <constraint firstItem="Y7S-9e-AUP" firstAttribute="bottom" secondItem="UzJ-kt-zvX" secondAttribute="bottom" id="VrC-de-c7N"/>
+                    <constraint firstItem="dgN-AD-hwP" firstAttribute="centerY" secondItem="iZ5-aB-wNh" secondAttribute="centerY" id="er4-2h-ncZ"/>
+                    <constraint firstItem="Ey0-Wb-Ofc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lN4-2u-HP1"/>
+                    <constraint firstAttribute="bottom" secondItem="GjQ-3g-xAV" secondAttribute="bottom" id="lWd-6m-JHW"/>
+                    <constraint firstItem="UzJ-kt-zvX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="mkm-KX-RyO"/>
+                    <constraint firstItem="iZ5-aB-wNh" firstAttribute="leading" secondItem="dgN-AD-hwP" secondAttribute="trailing" constant="5" id="sy6-iO-g9g"/>
+                    <constraint firstAttribute="bottom" secondItem="Ey0-Wb-Ofc" secondAttribute="bottom" id="uaH-rY-PGs"/>
+                    <constraint firstItem="UzJ-kt-zvX" firstAttribute="leading" secondItem="Y7S-9e-AUP" secondAttribute="trailing" constant="5" id="wXM-E6-nC7"/>
+                    <constraint firstAttribute="trailing" secondItem="GjQ-3g-xAV" secondAttribute="trailing" id="xu1-ms-rLH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="praiseButton" destination="GjQ-3g-xAV" id="tYG-1f-D5P"/>
+                <outlet property="praiseCountLabel" destination="iZ5-aB-wNh" id="kpK-Zf-cpk"/>
+                <outlet property="praiseImageView" destination="dgN-AD-hwP" id="BvR-hU-xuu"/>
+                <outlet property="praiseListButton" destination="Ey0-Wb-Ofc" id="N31-c4-2fb"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="-70"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="邻趣-详情页-点赞图标-灰-拷贝" width="17" height="17"/>
+    </resources>
+</document>

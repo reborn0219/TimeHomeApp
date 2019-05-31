@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="L_PopAlertView1">
+            <connections>
+                <outlet property="bottomBtnHeightLayout" destination="4FK-0t-r94" id="bXW-5K-P2H"/>
+                <outlet property="bottomLayout" destination="yGs-Bc-KYz" id="p0j-Jo-tUZ"/>
+                <outlet property="bottom_Button" destination="ccm-ih-XX2" id="xB3-6u-p0F"/>
+                <outlet property="message_Label" destination="LPb-hH-CBS" id="YV2-Mz-7gn"/>
+                <outlet property="top_Button" destination="q1c-vr-BBJ" id="4ga-Cz-nsa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cY-aM-TW5">
+                    <rect key="frame" x="22" y="165" width="276" height="238"/>
+                    <subviews>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccm-ih-XX2">
+                            <rect key="frame" x="22" y="184" width="232" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="4FK-0t-r94"/>
+                            </constraints>
+                            <state key="normal" title="忽略认证，进入平安社区">
+                                <color key="titleColor" red="0.82352941180000006" green="0.1176470588" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="bwidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="bcolor">
+                                    <color key="value" red="0.82352941180000006" green="0.1176470588" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="allButtonsDidClick:" destination="-1" eventType="touchUpInside" id="2sN-tR-Ujm"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1c-vr-BBJ">
+                            <rect key="frame" x="22" y="130" width="232" height="34"/>
+                            <color key="backgroundColor" red="0.82352941180000006" green="0.1176470588" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="zzG-ze-g21"/>
+                            </constraints>
+                            <state key="normal" title="我知道了">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="allButtonsDidClick:" destination="-1" eventType="touchUpInside" id="xZk-VB-a6o"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如果你的业主信息有误，您可以联系您的社区物业人员为您更正，物业为您更改信息后，您可以点击我的-我的社区-我的房产页面中再次进行认证" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPb-hH-CBS">
+                            <rect key="frame" x="22" y="20" width="232" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ccm-ih-XX2" firstAttribute="leading" secondItem="3cY-aM-TW5" secondAttribute="leading" constant="22" id="92y-de-TYG"/>
+                        <constraint firstAttribute="trailing" secondItem="ccm-ih-XX2" secondAttribute="trailing" constant="22" id="95G-Nr-cbz"/>
+                        <constraint firstItem="ccm-ih-XX2" firstAttribute="top" secondItem="q1c-vr-BBJ" secondAttribute="bottom" constant="20" id="E4S-JO-8qB"/>
+                        <constraint firstItem="LPb-hH-CBS" firstAttribute="top" secondItem="3cY-aM-TW5" secondAttribute="top" constant="20" id="Gsd-XT-2O2"/>
+                        <constraint firstItem="q1c-vr-BBJ" firstAttribute="leading" secondItem="3cY-aM-TW5" secondAttribute="leading" constant="22" id="TTF-Bj-63V"/>
+                        <constraint firstItem="LPb-hH-CBS" firstAttribute="leading" secondItem="3cY-aM-TW5" secondAttribute="leading" constant="22" id="d0G-M7-3q8"/>
+                        <constraint firstAttribute="trailing" secondItem="q1c-vr-BBJ" secondAttribute="trailing" constant="22" id="jVI-4I-ZDy"/>
+                        <constraint firstAttribute="bottom" secondItem="ccm-ih-XX2" secondAttribute="bottom" constant="20" id="yGs-Bc-KYz"/>
+                        <constraint firstItem="q1c-vr-BBJ" firstAttribute="top" secondItem="LPb-hH-CBS" secondAttribute="bottom" constant="20" id="zMp-jv-UuP"/>
+                        <constraint firstAttribute="trailing" secondItem="LPb-hH-CBS" secondAttribute="trailing" constant="22" id="zum-Jx-sfU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3cY-aM-TW5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="JhW-Mp-gGD"/>
+                <constraint firstItem="3cY-aM-TW5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="L6T-oy-VYO"/>
+                <constraint firstAttribute="trailing" secondItem="3cY-aM-TW5" secondAttribute="trailing" constant="22" id="f28-hd-JwD"/>
+                <constraint firstItem="3cY-aM-TW5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gUp-WI-wqY"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="39" y="3"/>
+        </view>
+    </objects>
+</document>

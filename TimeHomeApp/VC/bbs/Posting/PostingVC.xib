@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostingVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="发帖页面背景" translatesAutoresizingMaskIntoConstraints="NO" id="QGo-gk-nDF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QGo-gk-nDF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5vu-mW-Biv"/>
+                <constraint firstAttribute="trailing" secondItem="QGo-gk-nDF" secondAttribute="trailing" id="G8U-06-won"/>
+                <constraint firstAttribute="bottom" secondItem="QGo-gk-nDF" secondAttribute="bottom" id="LYi-EU-e4i"/>
+                <constraint firstItem="QGo-gk-nDF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ley-Pf-BJ3"/>
+            </constraints>
+            <point key="canvasLocation" x="-131" y="-432"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="发帖页面背景" width="414" height="736"/>
+    </resources>
+</document>

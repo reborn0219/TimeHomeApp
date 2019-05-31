@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostingAttestationVC">
+            <connections>
+                <outlet property="closeButton" destination="O8s-es-o4z" id="Uc7-dF-z08"/>
+                <outlet property="goButton" destination="ItN-Jl-RbM" id="zwe-7z-hgP"/>
+                <outlet property="titleLabel" destination="b4J-aU-YYr" id="M8c-bu-GWe"/>
+                <outlet property="topView" destination="D3W-dK-Kz2" id="Pdj-LY-Nz7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" alpha="0.40000000000000002" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rG1-WK-Ei7">
+                    <rect key="frame" x="40" y="233.5" width="295" height="200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3W-dK-Kz2">
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="133.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您还未进行手机认证" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4J-aU-YYr">
+                                    <rect key="frame" x="30" y="56.5" width="235" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.69858729839324951" green="0.70275086164474487" blue="0.70594686269760132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="b4J-aU-YYr" firstAttribute="leading" secondItem="D3W-dK-Kz2" secondAttribute="leading" constant="30" id="Ubg-oL-3UT"/>
+                                <constraint firstItem="b4J-aU-YYr" firstAttribute="centerX" secondItem="D3W-dK-Kz2" secondAttribute="centerX" id="cbU-Jg-eIC"/>
+                                <constraint firstItem="b4J-aU-YYr" firstAttribute="centerY" secondItem="D3W-dK-Kz2" secondAttribute="centerY" id="dz5-hM-Qpb"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnF-lg-8hV">
+                            <rect key="frame" x="0.0" y="133.5" width="295" height="66.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItN-Jl-RbM">
+                                    <rect key="frame" x="15" y="20.5" width="265" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="bop-zG-eIb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                    <state key="normal" title="去进行认证">
+                                        <color key="titleColor" red="0.79902386665344238" green="0.010577104054391384" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="goButtonClick:" destination="-1" eventType="touchUpInside" id="PVX-4C-5Yh"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="ItN-Jl-RbM" firstAttribute="leading" secondItem="UnF-lg-8hV" secondAttribute="leading" constant="15" id="32E-tg-ncZ"/>
+                                <constraint firstItem="ItN-Jl-RbM" firstAttribute="centerY" secondItem="UnF-lg-8hV" secondAttribute="centerY" id="44j-FQ-I6G"/>
+                                <constraint firstItem="ItN-Jl-RbM" firstAttribute="centerX" secondItem="UnF-lg-8hV" secondAttribute="centerX" id="jkT-51-ePS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="UnF-lg-8hV" firstAttribute="top" secondItem="D3W-dK-Kz2" secondAttribute="bottom" id="1dT-7b-YzK"/>
+                        <constraint firstItem="D3W-dK-Kz2" firstAttribute="top" secondItem="rG1-WK-Ei7" secondAttribute="top" id="I7b-Mq-KEe"/>
+                        <constraint firstAttribute="height" constant="200" id="ggH-wf-BmH"/>
+                        <constraint firstAttribute="trailing" secondItem="UnF-lg-8hV" secondAttribute="trailing" id="iIl-g9-lKh"/>
+                        <constraint firstAttribute="bottom" secondItem="UnF-lg-8hV" secondAttribute="bottom" id="kjW-So-PqT"/>
+                        <constraint firstItem="D3W-dK-Kz2" firstAttribute="leading" secondItem="rG1-WK-Ei7" secondAttribute="leading" id="lJf-Nf-XDp"/>
+                        <constraint firstItem="UnF-lg-8hV" firstAttribute="leading" secondItem="rG1-WK-Ei7" secondAttribute="leading" id="lcv-r7-4Af"/>
+                        <constraint firstItem="D3W-dK-Kz2" firstAttribute="height" secondItem="rG1-WK-Ei7" secondAttribute="height" multiplier="2:3" id="qAF-E6-kPi"/>
+                        <constraint firstAttribute="trailing" secondItem="D3W-dK-Kz2" secondAttribute="trailing" id="sGn-3x-V25"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwW-b7-mOa">
+                    <rect key="frame" x="40" y="433.5" width="295" height="150"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-es-o4z">
+                            <rect key="frame" x="130" y="95" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="O8s-es-o4z" secondAttribute="height" multiplier="1:1" id="B9x-0F-xuo"/>
+                                <constraint firstAttribute="width" constant="35" id="xvO-bc-cHj"/>
+                            </constraints>
+                            <state key="normal" image="关闭按钮"/>
+                            <connections>
+                                <action selector="closeButtonClick:" destination="-1" eventType="touchUpInside" id="XS6-6B-Sdu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="O8s-es-o4z" secondAttribute="bottom" constant="20" id="Bct-Yo-CDJ"/>
+                        <constraint firstItem="O8s-es-o4z" firstAttribute="centerX" secondItem="RwW-b7-mOa" secondAttribute="centerX" id="iDa-Xi-9eH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="rG1-WK-Ei7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="VS2-b9-6dh"/>
+                <constraint firstItem="RwW-b7-mOa" firstAttribute="top" secondItem="rG1-WK-Ei7" secondAttribute="bottom" id="a53-HA-N8a"/>
+                <constraint firstItem="rG1-WK-Ei7" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aOv-5A-ZbW"/>
+                <constraint firstItem="RwW-b7-mOa" firstAttribute="height" secondItem="rG1-WK-Ei7" secondAttribute="height" multiplier="3:4" id="bnT-NG-y6h"/>
+                <constraint firstItem="RwW-b7-mOa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="dGL-qr-uPe"/>
+                <constraint firstItem="rG1-WK-Ei7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lMf-j4-qH9"/>
+                <constraint firstItem="RwW-b7-mOa" firstAttribute="width" secondItem="rG1-WK-Ei7" secondAttribute="width" id="sJN-2f-IeG"/>
+            </constraints>
+            <point key="canvasLocation" x="-216" y="45"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="关闭按钮" width="49" height="49"/>
+    </resources>
+</document>

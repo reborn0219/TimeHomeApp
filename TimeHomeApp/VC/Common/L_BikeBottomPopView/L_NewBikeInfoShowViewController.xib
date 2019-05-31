@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="L_NewBikeInfoShowViewController">
+            <connections>
+                <outlet property="bgView" destination="Gef-xw-bOl" id="xxC-1c-N6V"/>
+                <outlet property="infoLabel" destination="UMk-lU-Afk" id="Tz8-hZ-zj7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gef-xw-bOl">
+                    <rect key="frame" x="40" y="226" width="295" height="216"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提  示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uty-74-NZV">
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
+                            <color key="backgroundColor" red="0.82352941180000006" green="0.1176470588" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="H7i-z1-vgY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjT-l6-aVL">
+                            <rect key="frame" x="0.0" y="166" width="295" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="K8s-dw-BvP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <state key="normal" title="知道了">
+                                <color key="titleColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="knowButtonDidTouch:" destination="-1" eventType="touchUpInside" id="MZd-hr-3Fr"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共享后的用户可以在本社区锁定和解锁二轮车" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMk-lU-Afk">
+                            <rect key="frame" x="35" y="40" width="225" height="126"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="RjT-l6-aVL" firstAttribute="top" secondItem="UMk-lU-Afk" secondAttribute="bottom" id="0M6-dp-ErZ"/>
+                        <constraint firstAttribute="trailing" secondItem="Uty-74-NZV" secondAttribute="trailing" id="6ZO-X3-Zpw"/>
+                        <constraint firstItem="Uty-74-NZV" firstAttribute="leading" secondItem="Gef-xw-bOl" secondAttribute="leading" id="7mX-4e-rEF"/>
+                        <constraint firstItem="RjT-l6-aVL" firstAttribute="leading" secondItem="Gef-xw-bOl" secondAttribute="leading" id="9dk-VC-fo9"/>
+                        <constraint firstItem="Uty-74-NZV" firstAttribute="top" secondItem="Gef-xw-bOl" secondAttribute="top" id="DSY-RP-cUB"/>
+                        <constraint firstAttribute="bottom" secondItem="RjT-l6-aVL" secondAttribute="bottom" id="SNR-70-c3G"/>
+                        <constraint firstAttribute="width" secondItem="Gef-xw-bOl" secondAttribute="height" multiplier="280:205" id="gga-F2-Ofv"/>
+                        <constraint firstItem="UMk-lU-Afk" firstAttribute="top" secondItem="Uty-74-NZV" secondAttribute="bottom" id="hgh-vy-9hP"/>
+                        <constraint firstAttribute="trailing" secondItem="RjT-l6-aVL" secondAttribute="trailing" id="lbg-Mv-nrG"/>
+                        <constraint firstItem="UMk-lU-Afk" firstAttribute="leading" secondItem="Gef-xw-bOl" secondAttribute="leading" constant="35" id="siD-wH-YaF"/>
+                        <constraint firstAttribute="trailing" secondItem="UMk-lU-Afk" secondAttribute="trailing" constant="35" id="wTd-rN-4Zy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Gef-xw-bOl" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Sax-oS-kwm"/>
+                <constraint firstAttribute="trailing" secondItem="Gef-xw-bOl" secondAttribute="trailing" constant="40" id="bpr-Yo-W6n"/>
+                <constraint firstItem="Gef-xw-bOl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="x53-Qo-mso"/>
+                <constraint firstItem="Gef-xw-bOl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="z82-L1-t7D"/>
+            </constraints>
+            <point key="canvasLocation" x="-176" y="-242"/>
+        </view>
+    </objects>
+</document>

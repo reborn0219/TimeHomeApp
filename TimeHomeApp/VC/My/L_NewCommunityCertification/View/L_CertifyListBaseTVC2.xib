@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="L_CertifyListBaseTVC2">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCG-U2-p7s">
+                        <rect key="frame" x="15" y="37" width="290" height="1"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Hqv-9M-pDS"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车位信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBX-3T-QMG">
+                        <rect key="frame" x="15" y="10" width="61.5" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="61.5" id="nl3-Ce-ONh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车       位" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lG-fl-Nzn">
+                        <rect key="frame" x="15" y="48" width="59" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="59" id="u9k-vp-3Fd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="102车位102车位102车位102车位102车位102车位" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8K-6R-2Jw">
+                        <rect key="frame" x="80" y="48.5" width="222" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="P0b-dL-yfO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IBX-3T-QMG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2gq-Q8-L1U"/>
+                    <constraint firstItem="nCG-U2-p7s" firstAttribute="top" secondItem="IBX-3T-QMG" secondAttribute="bottom" constant="10" id="2tr-X6-RKx"/>
+                    <constraint firstItem="7lG-fl-Nzn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="65A-Si-Eef"/>
+                    <constraint firstItem="nCG-U2-p7s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="G8j-bd-EZt"/>
+                    <constraint firstItem="IBX-3T-QMG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Lfk-2T-37V"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="K8K-6R-2Jw" secondAttribute="trailing" constant="6" id="WwW-IR-MoQ"/>
+                    <constraint firstItem="nCG-U2-p7s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="37" id="ZKw-4L-0en"/>
+                    <constraint firstAttribute="trailing" secondItem="nCG-U2-p7s" secondAttribute="trailing" constant="15" id="bkD-YA-Dfe"/>
+                    <constraint firstItem="K8K-6R-2Jw" firstAttribute="leading" secondItem="7lG-fl-Nzn" secondAttribute="trailing" constant="6" id="kok-5u-glt"/>
+                    <constraint firstItem="7lG-fl-Nzn" firstAttribute="top" secondItem="nCG-U2-p7s" secondAttribute="bottom" constant="10" id="qyZ-fa-sV9"/>
+                    <constraint firstItem="K8K-6R-2Jw" firstAttribute="top" secondItem="7lG-fl-Nzn" secondAttribute="top" id="vqf-EL-jbA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="carNum_Label" destination="K8K-6R-2Jw" id="SuG-Rg-sbq"/>
+            </connections>
+            <point key="canvasLocation" x="12" y="-375"/>
+        </tableViewCell>
+    </objects>
+</document>

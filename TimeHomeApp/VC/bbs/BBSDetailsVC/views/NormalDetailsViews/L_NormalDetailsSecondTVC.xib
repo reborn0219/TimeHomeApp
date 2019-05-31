@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="L_NormalDetailsSecondTVC">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmq-vP-asj">
+                        <rect key="frame" x="0.0" y="59" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="EdG-Yb-mQV"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="测试内容看看" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2o-wD-SxG">
+                        <rect key="frame" x="8" y="8" width="249" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="K2k-9p-Aci"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNT-hv-VPZ">
+                        <rect key="frame" x="265" y="5" width="47" height="47"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="47" id="WiX-Eh-2gs"/>
+                            <constraint firstAttribute="width" constant="47" id="wlb-QJ-V9y"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="邻趣-首页-红包图标"/>
+                        <connections>
+                            <action selector="redButtonDidTouch:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="c7q-ri-GKD"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LNT-hv-VPZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="AIf-sk-rkJ"/>
+                    <constraint firstAttribute="trailing" secondItem="nmq-vP-asj" secondAttribute="trailing" id="CC6-Qt-Mmu"/>
+                    <constraint firstAttribute="bottom" secondItem="nmq-vP-asj" secondAttribute="bottom" id="Ic9-vY-YhG"/>
+                    <constraint firstItem="nmq-vP-asj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Wzu-rc-p8R"/>
+                    <constraint firstItem="LNT-hv-VPZ" firstAttribute="leading" secondItem="O2o-wD-SxG" secondAttribute="trailing" constant="8" id="dc2-7g-WnT"/>
+                    <constraint firstAttribute="trailing" secondItem="LNT-hv-VPZ" secondAttribute="trailing" constant="8" id="ek9-ER-50Q"/>
+                    <constraint firstItem="O2o-wD-SxG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="u6J-Xv-mhu"/>
+                    <constraint firstItem="O2o-wD-SxG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="yCW-LD-TUM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="O2o-wD-SxG" id="ibR-4a-Kyv"/>
+                <outlet property="labelAndRedButtonLayout" destination="dc2-7g-WnT" id="i45-9S-kda"/>
+                <outlet property="lineView" destination="nmq-vP-asj" id="Hmn-j9-llz"/>
+                <outlet property="redButton" destination="LNT-hv-VPZ" id="5bG-fg-KIA"/>
+                <outlet property="redConstraint" destination="wlb-QJ-V9y" id="1Bi-hx-Nzk"/>
+            </connections>
+            <point key="canvasLocation" x="-399" y="-377"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="邻趣-首页-红包图标" width="47" height="47"/>
+    </resources>
+</document>

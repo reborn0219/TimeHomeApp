@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="L_NormalDetailThirdTVC">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVM-7R-nwO">
+                        <rect key="frame" x="311" y="5" width="1" height="33"/>
+                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="pAU-AT-WJn"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="浏览 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKI-SE-xb0">
+                        <rect key="frame" x="264.5" y="13" width="41.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="邻趣-浏览图标" translatesAutoresizingMaskIntoConstraints="NO" id="tsk-Wz-ho4">
+                        <rect key="frame" x="240.5" y="15" width="16" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="6fB-2Y-MLy"/>
+                            <constraint firstAttribute="height" constant="12" id="HFg-Bd-OFN"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fKI-SE-xb0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8Ng-g3-m8u"/>
+                    <constraint firstAttribute="bottom" secondItem="RVM-7R-nwO" secondAttribute="bottom" constant="5" id="fiw-sz-dSc"/>
+                    <constraint firstItem="fKI-SE-xb0" firstAttribute="leading" secondItem="tsk-Wz-ho4" secondAttribute="trailing" constant="8" id="ime-ro-v1J"/>
+                    <constraint firstItem="tsk-Wz-ho4" firstAttribute="centerY" secondItem="fKI-SE-xb0" secondAttribute="centerY" id="qGR-hc-JYc"/>
+                    <constraint firstAttribute="trailing" secondItem="RVM-7R-nwO" secondAttribute="trailing" constant="8" id="u71-JW-6Zh"/>
+                    <constraint firstItem="RVM-7R-nwO" firstAttribute="leading" secondItem="fKI-SE-xb0" secondAttribute="trailing" constant="5" id="vEo-Dz-PQZ"/>
+                    <constraint firstItem="RVM-7R-nwO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="vWt-n3-XeG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="liulanLabel" destination="fKI-SE-xb0" id="oQi-5f-rsI"/>
+            </connections>
+            <point key="canvasLocation" x="-86" y="-98"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="邻趣-浏览图标" width="16" height="12"/>
+    </resources>
+</document>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CarLocationCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarLocationCell" id="vRS-h8-sCN" customClass="CarLocationCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vRS-h8-sCN" id="Wyk-Od-Bph">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdz-8H-9zZ">
+                        <rect key="frame" x="10" y="5" width="300" height="90"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmi-1f-jaS">
+                                <rect key="frame" x="245" y="0.0" width="45" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="Nze-2F-g6o"/>
+                                </constraints>
+                                <state key="normal" image="车辆定位_删除"/>
+                                <connections>
+                                    <action selector="btn_DelEvent:" destination="vRS-h8-sCN" eventType="touchUpInside" id="XPX-Bf-2RT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBB-Fa-rI1">
+                                <rect key="frame" x="189" y="0.0" width="45" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="1X6-K7-xsc"/>
+                                </constraints>
+                                <state key="normal" image="车辆定位_编辑"/>
+                                <connections>
+                                    <action selector="btn_EditEvent:" destination="vRS-h8-sCN" eventType="touchUpInside" id="3RE-EI-io0"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIp-fL-Kcd">
+                                <rect key="frame" x="239" y="10" width="1" height="70"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="yV1-Vu-vhL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="哈俣时回去上班 杯里是多少打飞" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJj-m8-kBV">
+                                <rect key="frame" x="10" y="26" width="174" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="冀 AWD311" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6K-0a-XoI">
+                                <rect key="frame" x="10" y="10" width="174" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="FRT-LG-5Jq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nmi-1f-jaS" secondAttribute="trailing" constant="10" id="0t8-Is-5I7"/>
+                            <constraint firstItem="mIp-fL-Kcd" firstAttribute="leading" secondItem="BBB-Fa-rI1" secondAttribute="trailing" constant="5" id="AhF-QO-s5g"/>
+                            <constraint firstItem="nmi-1f-jaS" firstAttribute="leading" secondItem="mIp-fL-Kcd" secondAttribute="trailing" constant="5" id="Bmz-3k-s9R"/>
+                            <constraint firstItem="k6K-0a-XoI" firstAttribute="top" secondItem="qdz-8H-9zZ" secondAttribute="top" constant="10" id="CBy-Df-nP2"/>
+                            <constraint firstItem="QJj-m8-kBV" firstAttribute="leading" secondItem="k6K-0a-XoI" secondAttribute="leading" id="GdT-ft-BUS"/>
+                            <constraint firstItem="k6K-0a-XoI" firstAttribute="leading" secondItem="qdz-8H-9zZ" secondAttribute="leading" constant="10" id="HSt-nE-iHF"/>
+                            <constraint firstItem="nmi-1f-jaS" firstAttribute="top" secondItem="qdz-8H-9zZ" secondAttribute="top" id="HwZ-8P-dES"/>
+                            <constraint firstItem="BBB-Fa-rI1" firstAttribute="leading" secondItem="k6K-0a-XoI" secondAttribute="trailing" constant="5" id="M21-sa-Ahu"/>
+                            <constraint firstAttribute="bottom" secondItem="mIp-fL-Kcd" secondAttribute="bottom" constant="10" id="dbT-Tp-09H"/>
+                            <constraint firstAttribute="bottom" secondItem="nmi-1f-jaS" secondAttribute="bottom" id="fYt-4y-Xy7"/>
+                            <constraint firstItem="BBB-Fa-rI1" firstAttribute="leading" secondItem="QJj-m8-kBV" secondAttribute="trailing" constant="5" id="iZG-bu-Dv4"/>
+                            <constraint firstAttribute="bottom" secondItem="QJj-m8-kBV" secondAttribute="bottom" constant="10" id="l0F-65-E5N"/>
+                            <constraint firstItem="BBB-Fa-rI1" firstAttribute="top" secondItem="qdz-8H-9zZ" secondAttribute="top" id="n1o-yk-qJ0"/>
+                            <constraint firstItem="QJj-m8-kBV" firstAttribute="top" secondItem="k6K-0a-XoI" secondAttribute="bottom" id="nw9-BB-F9W"/>
+                            <constraint firstAttribute="bottom" secondItem="BBB-Fa-rI1" secondAttribute="bottom" id="qlS-d0-uma"/>
+                            <constraint firstItem="mIp-fL-Kcd" firstAttribute="top" secondItem="qdz-8H-9zZ" secondAttribute="top" constant="10" id="zhG-0P-Cjn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="qdz-8H-9zZ" secondAttribute="trailing" constant="10" id="PW8-WF-dYZ"/>
+                    <constraint firstItem="qdz-8H-9zZ" firstAttribute="top" secondItem="Wyk-Od-Bph" secondAttribute="top" constant="5" id="cLY-lB-DQy"/>
+                    <constraint firstItem="qdz-8H-9zZ" firstAttribute="leading" secondItem="Wyk-Od-Bph" secondAttribute="leading" constant="10" id="e15-8s-Pgv"/>
+                    <constraint firstAttribute="bottom" secondItem="qdz-8H-9zZ" secondAttribute="bottom" constant="5" id="mAV-Fn-nJt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lab_Addr" destination="QJj-m8-kBV" id="swF-kR-slf"/>
+                <outlet property="lab_CarNum" destination="k6K-0a-XoI" id="cBV-2M-UtF"/>
+            </connections>
+            <point key="canvasLocation" x="384" y="384"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="车辆定位_删除" width="28" height="28"/>
+        <image name="车辆定位_编辑" width="28" height="28"/>
+    </resources>
+</document>

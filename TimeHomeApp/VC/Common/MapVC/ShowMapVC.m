@@ -1,0 +1,278 @@
+//
+//  CarMapVC.m
+//  YouLifeApp
+//
+//  Created by us on 15/10/23.
+//  Copyright © 2015年 us. All rights reserved.
+//
+
+#import "ShowMapVC.h"
+#import "CarAnimatedAnnotationView.h"
+#import "AnimatedAnnotation.h"
+#import "UIImage+ImageRotate.h"
+#import "CarLocationInfo.h"
+#import "CarLocationPresenter.h"
+
+
+@interface ShowMapVC ()
+{
+    BMKPointAnnotation* pointAnnotation;
+    AnimatedAnnotation* animatedAnnotation;
+    CarAnimatedAnnotationView *annotationView;
+    
+    BMKGeoCodeSearch* _geocodesearch;
+    ///车辆定位处理
+    CarLocationPresenter * clPresenter;
+}
+
+@end
+
+@implementation ShowMapVC
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view
+
+    //适配ios7
+    if( ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0)) {
+        self.navigationController.navigationBar.translucent = NO;
+    }
+    self.bMapView.zoomLevel = 16;
+    self.bMapView.centerCoordinate = CLLocationCoordinate2DMake(39.924, 116.403);
+    self.bMapView.trafficEnabled=YES;
+    self.bMapView.showMapScaleBar=YES;
+    
+    self.bMapView.frame = CGRectMake(0, self.bMapView.frame.origin.y, self.bMapView.frame.size.width, self.view.frame.size.height - self.bMapView.frame.origin.y);
+    //自定义比例尺的位置
+    self.bMapView.mapScaleBarPosition = CGPointMake(10,10);
+
+    clPresenter=[CarLocationPresenter new];
+    
+    if (self.jumpCode==1) {
+        _geocodesearch = [[BMKGeoCodeSearch alloc]init];
+        
+    }
+    else if (self.jumpCode==2)
+    {
+        
+    }
+    self.navigationItem.title=self.title;
+    
+    
+
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.bMapView.overlooking = -0.1;
+    
+    CGPoint pt;
+//    pt = CGPointMake(10,10);
+    pt = CGPointMake(self.bMapView.frame.size.width-40,10);
+    [self.bMapView setCompassPosition:pt];
+    
+//    self.bMapView.showsUserLocation = NO;//先关闭显示的定位图层
+//    self.bMapView.userTrackingMode = BMKUserTrackingModeNone;//设置定位的状态
+//    self.bMapView.showsUserLocation = YES;//显示定位图层
+    if (self.jumpCode==1) {
+        [self addAnimatedAnnotation];
+    }
+    else
+    {
+        [self addPointAnnotation];
+        
+        self.label_Addr.text=self.poiInfo.address;
+        self.bMapView.centerCoordinate = self.poiInfo.pt;
+    }
+    
+}
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.bMapView viewWillAppear];
+    if (self.jumpCode==1) {
+       ///添加获取定位
+        [clPresenter GetAccessForAcc:self.carListModel.username pw:self.carListModel.password upDataViewBlock:^(id  _Nullable data, ResultCode resultCode) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if(resultCode==SucceedCode)
+                {
+                    [clPresenter startCarTimeTorefresh:self.carListModel.imei upDataViewBlock:^(id  _Nullable data, ResultCode resultCode) {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            if(resultCode==SucceedCode)
+                            {
+                                CarLocationInfo * carLocctionInfo=(CarLocationInfo *)data;
+                                CLLocationCoordinate2D coordinate;
+                                coordinate.latitude = carLocctionInfo.lat;
+                                coordinate.longitude = carLocctionInfo.lng;
+                                self.bMapView.centerCoordinate = coordinate;
+                                [self upDataImg:carLocctionInfo];
+                                BMKReverseGeoCodeSearchOption *reverseGeocodeSearchOption = [[BMKReverseGeoCodeSearchOption alloc]init];
+                                reverseGeocodeSearchOption.location = coordinate;
+                                BOOL flag = [_geocodesearch reverseGeoCode:reverseGeocodeSearchOption];
+                                if(flag)
+                                {
+                                    NSLog(@"转地址发送成功");
+                                }
+                                else
+                                {
+                                    NSLog(@"转地址发送失败");
+                                }
+
+                            }
+                            else if(resultCode==FailureCode)
+                            {
+                            }
+                            else if(resultCode==NONetWorkCode)//无网络处理
+                            {
+                            }
+                        });
+
+                    }];
+                }
+                else if(resultCode==FailureCode)
+                {
+                }
+                else if(resultCode==NONetWorkCode)//无网络处理
+                {
+                }
+            });
+
+        }];
+        self.bMapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
+        _geocodesearch.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
+    }
+    
+   
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.bMapView viewWillDisappear];
+    if (self.jumpCode==1) {
+        self.bMapView.delegate = nil; // 不用时，置nil
+        _geocodesearch.delegate = nil; // 不用时，置nil
+        ///添加刷新定位
+        [clPresenter cancalTimer];
+    }
+    
+}
+- (void)viewDidUnload {
+    [super viewDidUnload];
+}
+- (void)dealloc {
+    if (self.bMapView) {
+        self.bMapView = nil;
+    }
+    if (_geocodesearch != nil) {
+        _geocodesearch = nil;
+    }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+//添加标注
+- (void)addPointAnnotation
+{
+    if (pointAnnotation == nil) {
+        pointAnnotation = [[BMKPointAnnotation alloc]init];
+        pointAnnotation.coordinate = self.poiInfo.pt;
+        pointAnnotation.title = self.poiInfo.name;
+        pointAnnotation.subtitle = self.poiInfo.address;
+    }
+    [self.bMapView addAnnotation:pointAnnotation];
+}
+
+
+-(void)upDataImg:(CarLocationInfo *) carLocctionInfo
+{
+    
+    self.label_Addr.text=[NSString stringWithFormat:@"当前速度:%@Km/h",carLocctionInfo.speed];
+    
+    NSMutableArray *images = [NSMutableArray array];
+    UIImage *image = [UIImage imageNamed:@"地图标记"];
+    image=[image imageRotatedByDegrees:carLocctionInfo.direction];
+    [images addObject:image];
+    
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = carLocctionInfo.lat;
+    coordinate.longitude = carLocctionInfo.lng;
+    animatedAnnotation.coordinate=coordinate;
+    animatedAnnotation.animatedImages = images;
+    if (annotationView) {
+        [annotationView setAnnotation:animatedAnnotation];
+    }
+}
+// 添加动画Annotation
+- (void)addAnimatedAnnotation {
+    
+    if(animatedAnnotation)
+        return;
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = 39.925;
+    coordinate.longitude = 116.404;
+    animatedAnnotation = [[AnimatedAnnotation alloc] initWithCoordinate:coordinate];
+//    animatedAnnotation.animatedImages   = images;
+//    animatedAnnotation.title            = @"初始";
+//    animatedAnnotation.subtitle         = @"初始";
+    
+    [self.bMapView addAnnotation:animatedAnnotation];
+
+}
+
+// 根据anntation生成对应的View
+- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
+{
+//    普通annotation
+    if (annotation == pointAnnotation) {
+        NSString *AnnotationViewID = @"renameMark";
+         BMKPinAnnotationView * annotationView1 = (BMKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
+        if (annotationView1 == nil) {
+            annotationView1 = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationViewID];
+            // 设置颜色
+            annotationView1.pinColor = BMKPinAnnotationColorPurple;
+            // 从天上掉下效果
+            annotationView1.animatesDrop = YES;
+            // 设置可拖拽
+            annotationView1.draggable = NO;
+        }
+        return annotationView1;
+    }
+    if ([annotation isKindOfClass:[AnimatedAnnotation class]])
+    {
+        static NSString *animatedAnnotationIdentifier = @"AnimatedAnnotationIdentifier";
+        
+        annotationView = (CarAnimatedAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:nil];
+        
+        if (annotationView == nil)
+        {
+            annotationView = [[CarAnimatedAnnotationView alloc] initWithAnnotation:annotation
+                                                                reuseIdentifier:animatedAnnotationIdentifier];
+        }
+        
+//        annotationView.canShowCallout   = YES;
+        annotationView.draggable        = YES;
+        return annotationView;
+    }
+    
+    return nil;
+}
+
+
+-(void) onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKReverseGeoCodeSearchResult *)result errorCode:(BMKSearchErrorCode)error
+{
+
+    if (error == 0) {
+        NSString* showmeg;
+//        titleStr = @"反向地理编码";
+        showmeg = [NSString stringWithFormat:@"当前位置:%@",result.address];
+        self.label_Addr.text=showmeg;
+
+//        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:titleStr message:showmeg delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定",nil];
+//        [myAlertView show];
+    }
+}
+
+
+@end

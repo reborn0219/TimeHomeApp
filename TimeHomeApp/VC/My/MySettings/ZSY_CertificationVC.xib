@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZSY_CertificationVC">
+            <connections>
+                <outlet property="addImageButton" destination="hHu-DT-uq3" id="trr-Na-ZGC"/>
+                <outlet property="showImageView" destination="cwT-gU-BAY" id="tRl-Ph-hvb"/>
+                <outlet property="showPicButton" destination="ZWU-Uc-7xl" id="igJ-x2-2ti"/>
+                <outlet property="submitButton" destination="3jZ-jr-jmh" id="lzC-Ey-t4O"/>
+                <outlet property="topView" destination="m1H-WE-fOE" id="Ecr-Ug-2kH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdV-xv-Oki">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1H-WE-fOE">
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="证件要求:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyE-YK-8NZ">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="12" id="AjA-1E-UxM"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.需身份证本人手持证件,对正镜头自然拍摄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvZ-C5-oWs">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="12" id="nIE-bc-ylg"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.照片为正面半身照,需五官清晰可见无遮挡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmC-dK-dRZ">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="12" id="dj9-qK-gFZ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.身份证上的信息完整无遮挡,文字清晰可辨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5T-Ad-RQy">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="12" id="GGp-8j-l2o"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.拍照需露出手臂,以正式本人手持" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-IG-Mta">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="12" id="uxK-eF-JH4"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="wmC-dK-dRZ" secondAttribute="trailing" constant="45" id="F80-ek-F1p"/>
+                                <constraint firstItem="v5T-Ad-RQy" firstAttribute="leading" secondItem="m1H-WE-fOE" secondAttribute="leading" constant="45" id="HHT-lD-ukT"/>
+                                <constraint firstItem="wmC-dK-dRZ" firstAttribute="leading" secondItem="m1H-WE-fOE" secondAttribute="leading" constant="45" id="Ll8-Cp-hza"/>
+                                <constraint firstAttribute="trailing" secondItem="9dh-IG-Mta" secondAttribute="trailing" constant="45" id="Tyb-9m-gis"/>
+                                <constraint firstAttribute="trailing" secondItem="v5T-Ad-RQy" secondAttribute="trailing" constant="45" id="Xgb-1B-fbq"/>
+                                <constraint firstItem="QvZ-C5-oWs" firstAttribute="leading" secondItem="m1H-WE-fOE" secondAttribute="leading" constant="45" id="akV-nn-Jol"/>
+                                <constraint firstItem="QvZ-C5-oWs" firstAttribute="top" secondItem="eyE-YK-8NZ" secondAttribute="bottom" constant="6" id="aqs-qs-sgx"/>
+                                <constraint firstItem="9dh-IG-Mta" firstAttribute="top" secondItem="v5T-Ad-RQy" secondAttribute="bottom" constant="6" id="dwS-Cs-kr7"/>
+                                <constraint firstAttribute="trailing" secondItem="QvZ-C5-oWs" secondAttribute="trailing" constant="45" id="ezl-3c-c3w"/>
+                                <constraint firstAttribute="height" constant="300" id="fJd-Sk-dXV"/>
+                                <constraint firstItem="9dh-IG-Mta" firstAttribute="leading" secondItem="m1H-WE-fOE" secondAttribute="leading" constant="45" id="fbN-PF-5c8"/>
+                                <constraint firstItem="eyE-YK-8NZ" firstAttribute="leading" secondItem="m1H-WE-fOE" secondAttribute="leading" constant="45" id="jOg-lI-4uW"/>
+                                <constraint firstItem="v5T-Ad-RQy" firstAttribute="top" secondItem="wmC-dK-dRZ" secondAttribute="bottom" constant="6" id="ogc-s7-w2g"/>
+                                <constraint firstItem="wmC-dK-dRZ" firstAttribute="top" secondItem="QvZ-C5-oWs" secondAttribute="bottom" constant="6" id="s5o-L9-hn8"/>
+                                <constraint firstItem="eyE-YK-8NZ" firstAttribute="top" secondItem="m1H-WE-fOE" secondAttribute="top" constant="200" id="wod-dO-rhv"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAO-wb-ynx">
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="范例" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoJ-ok-Nfh">
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="个人设置-身份认证-范例-框" translatesAutoresizingMaskIntoConstraints="NO" id="i2I-6d-yFz">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="155" id="INf-vZ-qno"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="个人设置范例照片" translatesAutoresizingMaskIntoConstraints="NO" id="bPL-gX-uXW">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="153" id="BxD-QK-YP5"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="LoJ-ok-Nfh" firstAttribute="leading" secondItem="MAO-wb-ynx" secondAttribute="leading" constant="45" id="8gt-AK-UN7"/>
+                                <constraint firstAttribute="height" constant="220" id="Bvv-M6-j4z"/>
+                                <constraint firstItem="LoJ-ok-Nfh" firstAttribute="top" secondItem="MAO-wb-ynx" secondAttribute="top" constant="10" id="DBx-u6-AYi"/>
+                                <constraint firstItem="bPL-gX-uXW" firstAttribute="leading" secondItem="MAO-wb-ynx" secondAttribute="leading" constant="46" id="Sza-Sj-m3q"/>
+                                <constraint firstItem="bPL-gX-uXW" firstAttribute="top" secondItem="LoJ-ok-Nfh" secondAttribute="bottom" constant="16" id="URu-iq-92H"/>
+                                <constraint firstAttribute="trailing" secondItem="bPL-gX-uXW" secondAttribute="trailing" constant="47" id="VSo-b4-iLK"/>
+                                <constraint firstItem="i2I-6d-yFz" firstAttribute="centerX" secondItem="MAO-wb-ynx" secondAttribute="centerX" id="kVx-SJ-3Wk"/>
+                                <constraint firstItem="i2I-6d-yFz" firstAttribute="top" secondItem="LoJ-ok-Nfh" secondAttribute="bottom" constant="15" id="ua3-7E-xyX"/>
+                                <constraint firstItem="i2I-6d-yFz" firstAttribute="leading" secondItem="MAO-wb-ynx" secondAttribute="leading" constant="45" id="xib-Z3-Q7y"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jZ-jr-jmh">
+                            <color key="backgroundColor" red="0.78838628530502319" green="0.10799606889486313" blue="0.11259288340806961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="psW-zH-4fb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                            <state key="normal" title="提   交">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="submitClick:" destination="-1" eventType="touchUpInside" id="kRU-pq-tUp"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="个人设置-身份认证-范例-框" translatesAutoresizingMaskIntoConstraints="NO" id="cwT-gU-BAY">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="155" id="B9K-PE-efV"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWU-Uc-7xl">
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHu-DT-uq3">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="CP3-tI-2C2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                            <color key="tintColor" red="0.4398268461" green="0.4241257906" blue="0.42380955819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.4398268461" green="0.4241257906" blue="0.42380955819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="addImage:" destination="-1" eventType="touchUpInside" id="i2g-eW-q6o"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ZWU-Uc-7xl" firstAttribute="width" secondItem="cwT-gU-BAY" secondAttribute="width" constant="-4" id="0eg-YH-N1m"/>
+                        <constraint firstAttribute="trailing" secondItem="3jZ-jr-jmh" secondAttribute="trailing" constant="8" id="171-Zz-0o9"/>
+                        <constraint firstItem="3jZ-jr-jmh" firstAttribute="centerX" secondItem="JdV-xv-Oki" secondAttribute="centerX" id="3HY-Tm-0Ev"/>
+                        <constraint firstItem="hHu-DT-uq3" firstAttribute="centerY" secondItem="cwT-gU-BAY" secondAttribute="centerY" id="7cv-Gq-Iuy"/>
+                        <constraint firstItem="m1H-WE-fOE" firstAttribute="leading" secondItem="JdV-xv-Oki" secondAttribute="leading" constant="8" id="Ctm-C4-eHG"/>
+                        <constraint firstItem="m1H-WE-fOE" firstAttribute="centerX" secondItem="JdV-xv-Oki" secondAttribute="centerX" id="DIR-Qc-cKt"/>
+                        <constraint firstItem="ZWU-Uc-7xl" firstAttribute="centerX" secondItem="JdV-xv-Oki" secondAttribute="centerX" id="F2r-oA-9KE"/>
+                        <constraint firstItem="MAO-wb-ynx" firstAttribute="centerX" secondItem="JdV-xv-Oki" secondAttribute="centerX" id="H6g-VM-oZH"/>
+                        <constraint firstAttribute="trailing" secondItem="m1H-WE-fOE" secondAttribute="trailing" constant="8" id="Hpj-Gl-cOW"/>
+                        <constraint firstItem="hHu-DT-uq3" firstAttribute="centerX" secondItem="cwT-gU-BAY" secondAttribute="centerX" id="Rau-0b-j7U"/>
+                        <constraint firstItem="hHu-DT-uq3" firstAttribute="width" secondItem="cwT-gU-BAY" secondAttribute="width" constant="-2" id="UaL-Sr-jDh"/>
+                        <constraint firstItem="ZWU-Uc-7xl" firstAttribute="height" secondItem="cwT-gU-BAY" secondAttribute="height" constant="-4" id="Y4T-CZ-Kxd"/>
+                        <constraint firstAttribute="bottom" secondItem="3jZ-jr-jmh" secondAttribute="bottom" constant="8" id="Z2j-5R-b9i"/>
+                        <constraint firstItem="cwT-gU-BAY" firstAttribute="centerX" secondItem="JdV-xv-Oki" secondAttribute="centerX" id="fZJ-zg-9AJ"/>
+                        <constraint firstItem="MAO-wb-ynx" firstAttribute="top" secondItem="m1H-WE-fOE" secondAttribute="bottom" constant="8" id="h7u-vd-80c"/>
+                        <constraint firstItem="cwT-gU-BAY" firstAttribute="leading" secondItem="JdV-xv-Oki" secondAttribute="leading" constant="45" id="iSh-sm-N2z"/>
+                        <constraint firstItem="ZWU-Uc-7xl" firstAttribute="centerY" secondItem="cwT-gU-BAY" secondAttribute="centerY" id="sOn-13-Qsp"/>
+                        <constraint firstAttribute="trailing" secondItem="MAO-wb-ynx" secondAttribute="trailing" constant="8" id="t8R-Vw-0Bq"/>
+                        <constraint firstItem="3jZ-jr-jmh" firstAttribute="leading" secondItem="JdV-xv-Oki" secondAttribute="leading" constant="8" id="tKv-SN-fhl"/>
+                        <constraint firstItem="MAO-wb-ynx" firstAttribute="leading" secondItem="JdV-xv-Oki" secondAttribute="leading" constant="8" id="u3c-Dz-UU7"/>
+                        <constraint firstItem="cwT-gU-BAY" firstAttribute="top" secondItem="JdV-xv-Oki" secondAttribute="top" constant="30" id="uT5-LV-8hV"/>
+                        <constraint firstItem="3jZ-jr-jmh" firstAttribute="top" secondItem="MAO-wb-ynx" secondAttribute="bottom" constant="20" id="xXZ-gj-7Sz"/>
+                        <constraint firstItem="m1H-WE-fOE" firstAttribute="top" secondItem="JdV-xv-Oki" secondAttribute="top" constant="8" id="ylw-41-Unf"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="JdV-xv-Oki" secondAttribute="trailing" id="0q2-Ul-2xG"/>
+                <constraint firstItem="JdV-xv-Oki" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Od1-VS-49i"/>
+                <constraint firstAttribute="bottom" secondItem="JdV-xv-Oki" secondAttribute="bottom" id="UZm-VJ-eNx"/>
+                <constraint firstItem="JdV-xv-Oki" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n8G-kG-Agx"/>
+            </constraints>
+            <point key="canvasLocation" x="-210" y="-640"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="个人设置-身份认证-范例-框" width="293" height="177"/>
+        <image name="个人设置范例照片" width="225" height="159"/>
+    </resources>
+</document>

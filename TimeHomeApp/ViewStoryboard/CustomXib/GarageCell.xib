@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="GarageCell" reuseIdentifier="GarageCell" id="a7c-2k-V3D" customClass="GarageCell">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPj-jf-Aih">
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="170"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPx-kQ-tqZ">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="28"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="nnR-wD-v3f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="冀A77777" image="智能车库_车牌号_已解锁">
+                                    <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rG4-ij-bFW">
+                                <rect key="frame" x="0.0" y="28" width="140" height="1"/>
+                                <color key="backgroundColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="qcD-g0-goV"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月坛园15号 45sd" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fc2-Kb-25X">
+                                <rect key="frame" x="5" y="34" width="130" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Trs-1u-Q79"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OC-Aa-RHk">
+                                <rect key="frame" x="5" y="60" width="130" height="76"/>
+                                <state key="normal" image="智能车库_车辆状态_空"/>
+                                <connections>
+                                    <action selector="btn_CarStateClike:" destination="a7c-2k-V3D" eventType="touchUpInside" id="O2c-JN-8Bn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VM3-Bk-PTi">
+                                <rect key="frame" x="5" y="141" width="130" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Qnc-az-kTx"/>
+                                </constraints>
+                                <state key="normal" image="智能车库_已解锁"/>
+                                <connections>
+                                    <action selector="btn_LockClike:" destination="a7c-2k-V3D" eventType="touchUpInside" id="kTb-wi-gO7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fc2-Kb-25X" firstAttribute="top" secondItem="rG4-ij-bFW" secondAttribute="bottom" constant="5" id="3iO-Qt-QTp"/>
+                            <constraint firstAttribute="trailing" secondItem="5OC-Aa-RHk" secondAttribute="trailing" constant="5" id="7z0-AA-ugN"/>
+                            <constraint firstItem="rG4-ij-bFW" firstAttribute="leading" secondItem="BPj-jf-Aih" secondAttribute="leading" id="8Rt-e3-bQE"/>
+                            <constraint firstItem="TPx-kQ-tqZ" firstAttribute="top" secondItem="BPj-jf-Aih" secondAttribute="top" id="B1Y-Wb-jto"/>
+                            <constraint firstItem="Fc2-Kb-25X" firstAttribute="leading" secondItem="BPj-jf-Aih" secondAttribute="leading" constant="5" id="D1M-H0-hQj"/>
+                            <constraint firstAttribute="trailing" secondItem="TPx-kQ-tqZ" secondAttribute="trailing" id="DSk-EX-NgS"/>
+                            <constraint firstItem="TPx-kQ-tqZ" firstAttribute="leading" secondItem="BPj-jf-Aih" secondAttribute="leading" id="JBz-HD-OQc"/>
+                            <constraint firstItem="rG4-ij-bFW" firstAttribute="top" secondItem="TPx-kQ-tqZ" secondAttribute="bottom" id="K9A-v0-4N9"/>
+                            <constraint firstAttribute="trailing" secondItem="Fc2-Kb-25X" secondAttribute="trailing" constant="5" id="NKD-am-GeI"/>
+                            <constraint firstAttribute="trailing" secondItem="rG4-ij-bFW" secondAttribute="trailing" id="P8A-Jg-qsN"/>
+                            <constraint firstItem="5OC-Aa-RHk" firstAttribute="top" secondItem="Fc2-Kb-25X" secondAttribute="bottom" constant="5" id="UMr-lS-7go"/>
+                            <constraint firstAttribute="bottom" secondItem="VM3-Bk-PTi" secondAttribute="bottom" constant="5" id="WAb-ES-fQe"/>
+                            <constraint firstAttribute="trailing" secondItem="VM3-Bk-PTi" secondAttribute="trailing" constant="5" id="h5P-rg-Lpp"/>
+                            <constraint firstItem="VM3-Bk-PTi" firstAttribute="leading" secondItem="BPj-jf-Aih" secondAttribute="leading" constant="5" id="kOy-2l-hgx"/>
+                            <constraint firstItem="VM3-Bk-PTi" firstAttribute="top" secondItem="5OC-Aa-RHk" secondAttribute="bottom" constant="5" id="kbJ-to-idh"/>
+                            <constraint firstItem="5OC-Aa-RHk" firstAttribute="leading" secondItem="BPj-jf-Aih" secondAttribute="leading" constant="5" id="slL-uZ-rOr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="BPj-jf-Aih" firstAttribute="top" secondItem="a7c-2k-V3D" secondAttribute="top" id="CNn-Yt-21e"/>
+                <constraint firstItem="BPj-jf-Aih" firstAttribute="leading" secondItem="a7c-2k-V3D" secondAttribute="leading" id="bC7-FR-zoc"/>
+                <constraint firstAttribute="trailing" secondItem="BPj-jf-Aih" secondAttribute="trailing" constant="10" id="h4T-q7-Rzv"/>
+                <constraint firstAttribute="bottom" secondItem="BPj-jf-Aih" secondAttribute="bottom" constant="10" id="k3c-qg-rrb"/>
+            </constraints>
+            <connections>
+                <outlet property="btn_CarNum" destination="TPx-kQ-tqZ" id="OjS-NV-neB"/>
+                <outlet property="btn_CarState" destination="5OC-Aa-RHk" id="3ey-gK-39Q"/>
+                <outlet property="btn_Lock" destination="VM3-Bk-PTi" id="qLR-8e-XG1"/>
+                <outlet property="lab_GarageName" destination="Fc2-Kb-25X" id="BLF-et-HkJ"/>
+            </connections>
+            <point key="canvasLocation" x="515" y="280"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="智能车库_已解锁" width="88" height="24"/>
+        <image name="智能车库_车牌号_已解锁" width="20" height="13"/>
+        <image name="智能车库_车辆状态_空" width="57" height="57"/>
+    </resources>
+</document>

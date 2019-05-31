@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="Topic_Cell_3">
+            <rect key="frame" x="0.0" y="0.0" width="111" height="105"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="111" height="105"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="限行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsB-mA-6qY">
+                        <rect key="frame" x="1" y="42" width="108" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="GFw-bX-ZLq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j44-hW-CRJ">
+                        <rect key="frame" x="110" y="2" width="1" height="101"/>
+                        <color key="backgroundColor" red="0.59607843137254901" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="iY5-A6-ofZ"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="j44-hW-CRJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="6Mx-5g-pjU"/>
+                <constraint firstAttribute="trailing" secondItem="j44-hW-CRJ" secondAttribute="trailing" id="IwD-hF-5VV"/>
+                <constraint firstItem="lsB-mA-6qY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="J3v-fJ-Yhd"/>
+                <constraint firstItem="j44-hW-CRJ" firstAttribute="leading" secondItem="lsB-mA-6qY" secondAttribute="trailing" constant="1" id="fRA-qt-4Rf"/>
+                <constraint firstItem="lsB-mA-6qY" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="u0x-le-liy"/>
+                <constraint firstAttribute="bottom" secondItem="j44-hW-CRJ" secondAttribute="bottom" constant="2" id="uZt-hv-qQS"/>
+            </constraints>
+            <size key="customSize" width="111" height="105"/>
+            <connections>
+                <outlet property="lineImgV" destination="j44-hW-CRJ" id="8Mt-cx-I7E"/>
+                <outlet property="titleLb" destination="lsB-mA-6qY" id="Dr2-pi-oO7"/>
+            </connections>
+            <point key="canvasLocation" x="368.5" y="475.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="139" id="KGk-i7-Jjw" customClass="TopicImgCell">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="139"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="370" height="138.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6HH-JY-bPg">
+                        <rect key="frame" x="10" y="6" width="350" height="126"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gu-hs-vMV">
+                        <rect key="frame" x="10" y="6" width="38" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="38" id="LxJ-K8-ccN"/>
+                            <constraint firstAttribute="height" constant="38" id="tzB-eW-AFp"/>
+                        </constraints>
+                        <state key="normal" image="邻圈_我的话题_默认背景图"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6HH-JY-bPg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3RV-QS-JNb"/>
+                    <constraint firstItem="9gu-hs-vMV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="B6A-lc-cZb"/>
+                    <constraint firstItem="9gu-hs-vMV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="KQW-77-mGo"/>
+                    <constraint firstItem="6HH-JY-bPg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="bm1-Zc-KBW"/>
+                    <constraint firstAttribute="bottom" secondItem="6HH-JY-bPg" secondAttribute="bottom" constant="6" id="uZA-Z1-qiX"/>
+                    <constraint firstAttribute="trailing" secondItem="6HH-JY-bPg" secondAttribute="trailing" constant="10" id="vee-DA-5ay"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backImgV" destination="6HH-JY-bPg" id="BB5-GD-YTs"/>
+                <outlet property="leftBtn" destination="9gu-hs-vMV" id="4Ie-Ds-TXo"/>
+            </connections>
+            <point key="canvasLocation" x="271" y="230.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="邻圈_我的话题_默认背景图" width="38" height="38"/>
+    </resources>
+</document>

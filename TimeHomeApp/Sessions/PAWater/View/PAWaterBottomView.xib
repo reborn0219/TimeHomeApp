@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PAWaterBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZZ-Ls-v1Z">
+                    <rect key="frame" x="252" y="8" width="105" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="1Y5-ch-8gk"/>
+                        <constraint firstAttribute="width" constant="105" id="hGS-os-1v5"/>
+                    </constraints>
+                    <state key="normal" title="支付">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="payButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="L7N-lB-U1M"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sL5-WB-wZA">
+                    <rect key="frame" x="19" y="21.5" width="36" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="1b9-Ld-N66"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" red="0.27450980392156865" green="0.29019607843137252" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxf-rc-z59">
+                    <rect key="frame" x="62" y="30" width="11" height="11"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="11" id="ITe-7a-x5F"/>
+                        <constraint firstAttribute="height" constant="11" id="ZFw-0M-cHZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gg-fj-hgh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="zfy-eA-LXH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8gg-fj-hgh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MYd-J0-Psj"/>
+                <constraint firstItem="8gg-fj-hgh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NIt-Cb-mdo"/>
+                <constraint firstItem="sL5-WB-wZA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cvZ-ZR-eKH"/>
+                <constraint firstItem="eZZ-Ls-v1Z" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="eJE-59-T02"/>
+                <constraint firstAttribute="trailing" secondItem="8gg-fj-hgh" secondAttribute="trailing" id="lAp-iy-A2S"/>
+                <constraint firstItem="sL5-WB-wZA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="19" id="pD4-5a-5FT"/>
+                <constraint firstItem="Mxf-rc-z59" firstAttribute="leading" secondItem="sL5-WB-wZA" secondAttribute="trailing" constant="7" id="sw0-JA-Dfb"/>
+                <constraint firstItem="Mxf-rc-z59" firstAttribute="centerY" secondItem="sL5-WB-wZA" secondAttribute="centerY" constant="5" id="wmr-xB-lnk"/>
+                <constraint firstAttribute="trailing" secondItem="eZZ-Ls-v1Z" secondAttribute="trailing" constant="18" id="yz0-Kd-Xvv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="moneyLabel" destination="sL5-WB-wZA" id="l7H-3Q-xhC"/>
+                <outlet property="payButton" destination="eZZ-Ls-v1Z" id="fw1-Us-nc1"/>
+            </connections>
+            <point key="canvasLocation" x="-69.5" y="131"/>
+        </view>
+    </objects>
+</document>

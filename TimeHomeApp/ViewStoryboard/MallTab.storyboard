@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--购物-->
+        <scene sceneID="mn6-LB-TmD">
+            <objects>
+                <navigationController restorationIdentifier="mallNav" storyboardIdentifier="mallNav" id="vnq-ag-6Wj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="3" title="购物" image="购物_uncheck" id="be5-6a-ibm"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="sjh-EI-kQl">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="t0D-V7-vO7" kind="relationship" relationship="rootViewController" id="qHg-Mc-CzS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Jd-Xl-CHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="-20"/>
+        </scene>
+        <!--购物-->
+        <scene sceneID="RMm-pN-zi2">
+            <objects>
+                <viewController restorationIdentifier="MallTabVC" storyboardIdentifier="MallTabVC" hidesBottomBarWhenPushed="YES" id="t0D-V7-vO7" customClass="MallTabVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SWC-XZ-Wv0"/>
+                        <viewControllerLayoutGuide type="bottom" id="opF-90-DUQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hvA-tP-K7s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QfC-Rz-NUQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="t0D-V7-vO7" id="30F-Ol-Qf2"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QfC-Rz-NUQ" secondAttribute="trailing" id="BZJ-Xy-dsi"/>
+                            <constraint firstItem="QfC-Rz-NUQ" firstAttribute="leading" secondItem="hvA-tP-K7s" secondAttribute="leading" id="IBv-Un-McL"/>
+                            <constraint firstAttribute="bottom" secondItem="QfC-Rz-NUQ" secondAttribute="bottom" id="ceL-3L-W5M"/>
+                            <constraint firstItem="QfC-Rz-NUQ" firstAttribute="top" secondItem="SWC-XZ-Wv0" secondAttribute="bottom" id="kyi-d0-cjg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="购物" id="fvV-Wt-ly0">
+                        <barButtonItem key="leftBarButtonItem" image="返回" id="Nie-jF-YdR">
+                            <color key="tintColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="navLeftBtnEvent:" destination="t0D-V7-vO7" id="ewI-Lb-lbt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="QfC-Rz-NUQ" id="F4P-PA-Edz"/>
+                        <segue destination="mCK-1X-teI" kind="push" id="lsi-rw-SVU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ol-wx-HGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1632" y="-20"/>
+        </scene>
+        <!--商城-->
+        <scene sceneID="ymb-Rc-AeT">
+            <objects>
+                <viewController restorationIdentifier="MailWebVC" storyboardIdentifier="MailWebVC" hidesBottomBarWhenPushed="YES" id="mCK-1X-teI" customClass="MailWebVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y12-y7-ziB"/>
+                        <viewControllerLayoutGuide type="bottom" id="qoQ-qV-ZFL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ocq-7l-cSh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-v8-BN8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Wi-v8-BN8" firstAttribute="top" secondItem="Y12-y7-ziB" secondAttribute="bottom" id="bdP-h3-OP7"/>
+                            <constraint firstAttribute="trailing" secondItem="2Wi-v8-BN8" secondAttribute="trailing" id="ipV-Hc-9bq"/>
+                            <constraint firstItem="2Wi-v8-BN8" firstAttribute="leading" secondItem="Ocq-7l-cSh" secondAttribute="leading" id="nA8-l2-nlc"/>
+                            <constraint firstItem="qoQ-qV-ZFL" firstAttribute="top" secondItem="2Wi-v8-BN8" secondAttribute="bottom" id="vWb-6Q-3kS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="商城" id="mfz-rp-Ghf">
+                        <barButtonItem key="backBarButtonItem" title=" " id="5XJ-Mg-Zes"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="2Wi-v8-BN8" id="xxV-sW-TR1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Y5-BG-ckG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2431" y="-20"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="购物_uncheck" width="23" height="23"/>
+        <image name="返回" width="21" height="21"/>
+    </resources>
+</document>

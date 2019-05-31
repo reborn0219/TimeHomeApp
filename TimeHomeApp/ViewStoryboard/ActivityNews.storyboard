@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ocz-no-TnA">
+            <objects>
+                <navigationController id="rjk-i6-ooT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="7xJ-QM-8PQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qzP-bQ-k4z" kind="relationship" relationship="rootViewController" id="cBB-7W-1Cf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esZ-lO-uPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-544" y="309"/>
+        </scene>
+        <!--社区活动-->
+        <scene sceneID="gJa-6P-wVm">
+            <objects>
+                <viewController restorationIdentifier="ActivitysVC" storyboardIdentifier="ActivitysVC" hidesBottomBarWhenPushed="YES" id="qzP-bQ-k4z" customClass="ActivitysVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nuh-SU-2dh"/>
+                        <viewControllerLayoutGuide type="bottom" id="KQU-oR-Sf4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9eH-Lf-lJF">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CE1-Kx-aJU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qzP-bQ-k4z" id="FED-A6-rVU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CE1-Kx-aJU" firstAttribute="top" secondItem="Nuh-SU-2dh" secondAttribute="bottom" id="1ff-9P-l9H"/>
+                            <constraint firstAttribute="trailing" secondItem="CE1-Kx-aJU" secondAttribute="trailing" id="B32-P5-s1g"/>
+                            <constraint firstItem="CE1-Kx-aJU" firstAttribute="leading" secondItem="9eH-Lf-lJF" secondAttribute="leading" id="XJs-bp-znb"/>
+                            <constraint firstItem="KQU-oR-Sf4" firstAttribute="top" secondItem="CE1-Kx-aJU" secondAttribute="bottom" id="wlQ-EL-KMV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="社区活动" id="76o-BD-hHN">
+                        <barButtonItem key="backBarButtonItem" title=" " id="lmm-OY-AaP"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="CE1-Kx-aJU" id="ozd-aN-xja"/>
+                        <segue destination="dkY-BT-AdV" kind="push" id="CAt-lF-Cec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7N2-M0-dmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="304"/>
+        </scene>
+        <!--社区新闻-->
+        <scene sceneID="pfV-3a-BKj">
+            <objects>
+                <viewController restorationIdentifier="NewsVC" storyboardIdentifier="NewsVC" hidesBottomBarWhenPushed="YES" id="dkY-BT-AdV" customClass="NewsVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="01V-uA-RUX"/>
+                        <viewControllerLayoutGuide type="bottom" id="J4B-VZ-7qp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5dv-Yt-wz4">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIU-Vu-iy8">
+                                <rect key="frame" x="10" y="10" width="580" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVg-RY-azN">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="本小区" image="社区新闻_本小区_已选中">
+                                            <color key="titleColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWI-WQ-fpo">
+                                        <rect key="frame" x="290" y="0.0" width="290" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="全部" image="社区新闻_全部_未选中">
+                                            <color key="titleColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="社区_新闻_分隔线" translatesAutoresizingMaskIntoConstraints="NO" id="wiH-Rx-f0j">
+                                        <rect key="frame" x="265" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="YY3-Lt-WPW"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="AWI-WQ-fpo" firstAttribute="top" secondItem="pIU-Vu-iy8" secondAttribute="top" id="1WN-0u-A7a"/>
+                                    <constraint firstItem="AWI-WQ-fpo" firstAttribute="leading" secondItem="vVg-RY-azN" secondAttribute="trailing" id="28J-v0-T8q"/>
+                                    <constraint firstAttribute="trailing" secondItem="AWI-WQ-fpo" secondAttribute="trailing" id="8Xh-Ms-Rvd"/>
+                                    <constraint firstAttribute="bottom" secondItem="vVg-RY-azN" secondAttribute="bottom" id="CBp-s8-GGD"/>
+                                    <constraint firstItem="vVg-RY-azN" firstAttribute="leading" secondItem="pIU-Vu-iy8" secondAttribute="leading" id="IvH-np-2fY"/>
+                                    <constraint firstAttribute="height" constant="50" id="KLZ-er-I06"/>
+                                    <constraint firstItem="wiH-Rx-f0j" firstAttribute="centerX" secondItem="pIU-Vu-iy8" secondAttribute="centerX" id="OHi-Vp-1a9"/>
+                                    <constraint firstAttribute="bottom" secondItem="wiH-Rx-f0j" secondAttribute="bottom" id="jXH-Fq-dnf"/>
+                                    <constraint firstAttribute="bottom" secondItem="AWI-WQ-fpo" secondAttribute="bottom" id="nHt-fB-Ocp"/>
+                                    <constraint firstItem="vVg-RY-azN" firstAttribute="top" secondItem="pIU-Vu-iy8" secondAttribute="top" id="rrH-93-3Xv"/>
+                                    <constraint firstItem="wiH-Rx-f0j" firstAttribute="top" secondItem="pIU-Vu-iy8" secondAttribute="top" id="xlS-mO-awO"/>
+                                    <constraint firstItem="AWI-WQ-fpo" firstAttribute="width" secondItem="vVg-RY-azN" secondAttribute="width" id="zqY-vB-a5b"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NoJ-OY-vId">
+                                <rect key="frame" x="0.0" y="60" width="600" height="476"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dkY-BT-AdV" id="015-I7-kUM"/>
+                                    <outlet property="delegate" destination="dkY-BT-AdV" id="3DH-IM-cI2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NoJ-OY-vId" firstAttribute="leading" secondItem="5dv-Yt-wz4" secondAttribute="leading" id="BAH-Ku-erK"/>
+                            <constraint firstItem="pIU-Vu-iy8" firstAttribute="leading" secondItem="5dv-Yt-wz4" secondAttribute="leading" constant="10" id="GOx-ni-DoK"/>
+                            <constraint firstItem="NoJ-OY-vId" firstAttribute="top" secondItem="pIU-Vu-iy8" secondAttribute="bottom" id="MMz-fi-46o"/>
+                            <constraint firstItem="J4B-VZ-7qp" firstAttribute="top" secondItem="NoJ-OY-vId" secondAttribute="bottom" id="egL-e2-e5c"/>
+                            <constraint firstAttribute="trailing" secondItem="pIU-Vu-iy8" secondAttribute="trailing" constant="10" id="gZH-72-MF9"/>
+                            <constraint firstItem="pIU-Vu-iy8" firstAttribute="top" secondItem="01V-uA-RUX" secondAttribute="bottom" constant="10" id="jMB-os-Wvc"/>
+                            <constraint firstAttribute="trailing" secondItem="NoJ-OY-vId" secondAttribute="trailing" id="roA-Mb-nod"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="社区新闻" id="rfc-Uy-dI0">
+                        <barButtonItem key="backBarButtonItem" title=" " id="63t-pc-cCO"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btn_All" destination="AWI-WQ-fpo" id="oMh-1Z-qnj"/>
+                        <outlet property="btn_Village" destination="vVg-RY-azN" id="8R3-Li-kF9"/>
+                        <outlet property="tableView" destination="NoJ-OY-vId" id="KWf-6D-Obm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NUW-81-5xc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="1020"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="社区_新闻_分隔线" width="54" height="54"/>
+        <image name="社区新闻_全部_未选中" width="28" height="28"/>
+        <image name="社区新闻_本小区_已选中" width="28" height="28"/>
+    </resources>
+</document>

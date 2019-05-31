@@ -1,0 +1,97 @@
+//
+//
+//  Created by us on 15/7/23.
+//  Copyright © 2015年 us. All rights reserved.
+//
+
+#ifndef THIOSApp_PrefixHeader_pch
+#define THIOSApp_PrefixHeader_pch
+
+#define HTTP_POST   @"NetGetDataCommand"
+#define HTTP_UPLOAD @"NetUpLoadFileCommand"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+/**
+ isProducetion 枚举
+ 1 生产环境
+ 2 准生产环境
+ 3 测试环境
+ */
+
+#define isProduction 1
+
+#import "USConst.h"
+#import "MacroDefinition.h"
+#import "AppType.h"
+
+/****************************新框架所需库***********************************/
+
+#import "YTKNetwork.h"
+#import <YYModel/YYModel.h>
+#import <YYCategories/YYCategories.h>
+
+
+#import "PA3rdSDKConfig.h"
+#import "PANetworkConfig.h"
+#import "PABlockDefinition.h"
+#import "PAColorMacro.h"
+#import "PANotificationDefinition.h"
+#import "PAWaterDefinition.h"
+/************************************************************************/
+
+
+#import "AppDelegate.h"
+#import "AppDelegate+Helper.h"
+#import "AppDelegate+CoreData.h"
+#import "AppDelegate+UserStatistics.h"
+#import "AppDelegate+Message.h"
+
+#import "GCD.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "MJTimeHomeGifHeader.h"
+#import "MJTimeHomeGifFooter.h"
+#import "Masonry.h"
+#import "IQKeyboardManager.h"
+#import "SDPhotoBrowser.h"
+#import "TalkingData.h"
+#import "XYString.h"
+#import "SVProgressHUD.h"
+
+//UI
+#import "CALayer+CALayer_UIColor.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "UITableView+SDAutoTableViewCellHeight.h"
+#import "UIView+SDAutoLayout.h"
+#import "UIView+SDExtension.h"
+#import "YYPlaySound.h"
+
+/****************************自定义***********************************/
+
+#import "NullPointerUtils.h"
+#import "NSString+THExtension.h"
+#import "UserDefaultsStorage.h"
+#import "DataDealUitls.h"
+
+#import "CommonAlertVC.h"
+#import "BaseTableView.h"
+#import "THBaseViewController.h"
+
+#import "PAAuthority.h"
+#import "PAUserManager.h"
+#import "PAAlertViewManager.h"
+#define PASQ_SJZ_COMMUNITYID @"10000001942"//新服务测试社区：平安社区石家庄
+
+#endif
+
+#if __has_feature(objc_arc) && __clang_major__ >= 3
+#define ARC_ENABLED 1
+#endif // __has_feature(objc_arc)
+
+
+#endif /* THIOSApp_PrefixHeader_pch */

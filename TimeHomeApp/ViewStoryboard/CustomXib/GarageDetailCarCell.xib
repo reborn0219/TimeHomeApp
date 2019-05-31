@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GarageDetailCarCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="GarageDetailCarCell" id="o6c-sN-BP9" customClass="GarageDetailCarCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o6c-sN-BP9" id="0ld-QA-IAh">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCp-wt-VlF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="未入库车辆_初始状态" translatesAutoresizingMaskIntoConstraints="NO" id="deK-Tt-nL2">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="deK-Tt-nL2" secondAttribute="height" multiplier="1:1" id="ihK-RS-qOU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="智能车库_车牌号_联系车主" translatesAutoresizingMaskIntoConstraints="NO" id="8hJ-2k-hK8">
+                                <rect key="frame" x="20" y="0.0" width="20" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="EzX-M8-Xec"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="冀A99999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zi9-KD-FDs">
+                                <rect key="frame" x="50" y="5" width="80" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="YI1-rp-AfL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张三李四" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGq-CA-KS2">
+                                <rect key="frame" x="140" y="5" width="110" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEs-kh-XSF">
+                                <rect key="frame" x="20" y="49" width="280" height="1"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="c3D-ds-0dO"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQ2-gV-bue">
+                                <rect key="frame" x="260" y="5" width="60" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="QRk-9q-JG4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" image="智能车库_未入库车辆_删除车牌">
+                                    <color key="titleColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_DelEvent:" destination="o6c-sN-BP9" eventType="touchUpInside" id="aWI-lx-oO3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8hJ-2k-hK8" firstAttribute="leading" secondItem="deK-Tt-nL2" secondAttribute="trailing" id="0G0-WL-Lsp"/>
+                            <constraint firstItem="deK-Tt-nL2" firstAttribute="height" secondItem="bCp-wt-VlF" secondAttribute="height" multiplier="1:2.5" id="3DJ-du-QwD"/>
+                            <constraint firstAttribute="trailing" secondItem="FEs-kh-XSF" secondAttribute="trailing" constant="20" id="8hF-v2-vWj"/>
+                            <constraint firstItem="HQ2-gV-bue" firstAttribute="top" secondItem="bCp-wt-VlF" secondAttribute="top" constant="5" id="EdT-y0-KC5"/>
+                            <constraint firstItem="deK-Tt-nL2" firstAttribute="top" secondItem="bCp-wt-VlF" secondAttribute="top" id="Gby-Cj-GOM"/>
+                            <constraint firstAttribute="bottom" secondItem="KGq-CA-KS2" secondAttribute="bottom" constant="5" id="IAf-VI-Jmc"/>
+                            <constraint firstItem="FEs-kh-XSF" firstAttribute="leading" secondItem="bCp-wt-VlF" secondAttribute="leading" constant="20" id="Jvh-O4-jyz"/>
+                            <constraint firstItem="zi9-KD-FDs" firstAttribute="top" secondItem="bCp-wt-VlF" secondAttribute="top" constant="5" id="Qwg-p8-bsM"/>
+                            <constraint firstAttribute="trailing" secondItem="HQ2-gV-bue" secondAttribute="trailing" id="Rsq-3D-D9E"/>
+                            <constraint firstItem="KGq-CA-KS2" firstAttribute="top" secondItem="bCp-wt-VlF" secondAttribute="top" constant="5" id="Wac-6F-R34"/>
+                            <constraint firstItem="KGq-CA-KS2" firstAttribute="leading" secondItem="zi9-KD-FDs" secondAttribute="trailing" constant="10" id="XM0-Wy-WWW"/>
+                            <constraint firstItem="HQ2-gV-bue" firstAttribute="leading" secondItem="KGq-CA-KS2" secondAttribute="trailing" constant="10" id="bCR-Kx-ITt"/>
+                            <constraint firstItem="8hJ-2k-hK8" firstAttribute="top" secondItem="bCp-wt-VlF" secondAttribute="top" id="e0A-ia-wjh"/>
+                            <constraint firstAttribute="bottom" secondItem="FEs-kh-XSF" secondAttribute="bottom" id="fJR-uk-dHL"/>
+                            <constraint firstAttribute="bottom" secondItem="8hJ-2k-hK8" secondAttribute="bottom" id="gAv-ZY-d2C"/>
+                            <constraint firstItem="zi9-KD-FDs" firstAttribute="leading" secondItem="8hJ-2k-hK8" secondAttribute="trailing" constant="10" id="gWx-1d-Mjp"/>
+                            <constraint firstAttribute="bottom" secondItem="HQ2-gV-bue" secondAttribute="bottom" constant="5" id="iya-GP-tx3"/>
+                            <constraint firstItem="FEs-kh-XSF" firstAttribute="top" secondItem="zi9-KD-FDs" secondAttribute="bottom" constant="5" id="sXx-xv-ehk"/>
+                            <constraint firstItem="deK-Tt-nL2" firstAttribute="leading" secondItem="bCp-wt-VlF" secondAttribute="leading" id="tEY-cR-vHN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bCp-wt-VlF" firstAttribute="top" secondItem="0ld-QA-IAh" secondAttribute="top" id="9nm-mr-yGI"/>
+                    <constraint firstAttribute="trailing" secondItem="bCp-wt-VlF" secondAttribute="trailing" id="9tK-et-fk3"/>
+                    <constraint firstAttribute="bottom" secondItem="bCp-wt-VlF" secondAttribute="bottom" id="Qgn-yw-TLM"/>
+                    <constraint firstItem="bCp-wt-VlF" firstAttribute="leading" secondItem="0ld-QA-IAh" secondAttribute="leading" id="jSp-lI-JAw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btn_Del" destination="HQ2-gV-bue" id="hCE-D3-cvA"/>
+                <outlet property="img_Icon" destination="deK-Tt-nL2" id="kti-NL-vhd"/>
+                <outlet property="lab_CarNum" destination="zi9-KD-FDs" id="Yg4-AG-B88"/>
+                <outlet property="lab_Name" destination="KGq-CA-KS2" id="o8L-hr-GLu"/>
+            </connections>
+            <point key="canvasLocation" x="176" y="-81"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="智能车库_未入库车辆_删除车牌" width="17" height="17"/>
+        <image name="智能车库_车牌号_联系车主" width="20" height="13"/>
+        <image name="未入库车辆_初始状态" width="30" height="30"/>
+    </resources>
+</document>

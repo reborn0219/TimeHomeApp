@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="L_HouseDetailForthTVC">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqt-YW-2xY">
+                        <rect key="frame" x="8" y="0.0" width="304" height="49"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ft-IG-NvL">
+                                <rect key="frame" x="298" y="5" width="1" height="39"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="U7g-Vx-lwN"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="邻趣-详情页-点赞图标-灰-拷贝" translatesAutoresizingMaskIntoConstraints="NO" id="AUT-5Q-sB3">
+                                <rect key="frame" x="273" y="5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="v7f-sA-fVO"/>
+                                    <constraint firstAttribute="height" constant="20" id="zSi-QE-Rhd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="赞" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MJ-BS-8hW">
+                                <rect key="frame" x="275.5" y="27" width="14.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4O-cy-pDF">
+                                <rect key="frame" x="259" y="7" width="9" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0k-a8-frb">
+                                <rect key="frame" x="254" y="0.0" width="50" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="YtU-6K-mBm"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="praiseButtonDidTouch:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oWg-KW-xQm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3h-S9-xip">
+                                <rect key="frame" x="0.0" y="0.0" width="254" height="49"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AUT-5Q-sB3" firstAttribute="top" secondItem="4ft-IG-NvL" secondAttribute="top" id="02c-gE-F3x"/>
+                            <constraint firstItem="5MJ-BS-8hW" firstAttribute="bottom" secondItem="4ft-IG-NvL" secondAttribute="bottom" id="92Q-7y-oam"/>
+                            <constraint firstAttribute="trailing" secondItem="R0k-a8-frb" secondAttribute="trailing" id="AQ3-hS-80J"/>
+                            <constraint firstItem="4ft-IG-NvL" firstAttribute="top" secondItem="tqt-YW-2xY" secondAttribute="top" constant="5" id="ChJ-QO-Ycz"/>
+                            <constraint firstItem="h4O-cy-pDF" firstAttribute="centerY" secondItem="AUT-5Q-sB3" secondAttribute="centerY" id="Gm1-fk-guC"/>
+                            <constraint firstItem="R0k-a8-frb" firstAttribute="top" secondItem="tqt-YW-2xY" secondAttribute="top" id="MF3-N8-Gvv"/>
+                            <constraint firstItem="4ft-IG-NvL" firstAttribute="leading" secondItem="5MJ-BS-8hW" secondAttribute="trailing" constant="8" id="YWW-xT-nfM"/>
+                            <constraint firstItem="X3h-S9-xip" firstAttribute="leading" secondItem="tqt-YW-2xY" secondAttribute="leading" id="c5K-BJ-TPh"/>
+                            <constraint firstAttribute="bottom" secondItem="4ft-IG-NvL" secondAttribute="bottom" constant="5" id="duu-cN-wTD"/>
+                            <constraint firstAttribute="bottom" secondItem="X3h-S9-xip" secondAttribute="bottom" id="eVE-X4-uel"/>
+                            <constraint firstItem="4ft-IG-NvL" firstAttribute="leading" secondItem="AUT-5Q-sB3" secondAttribute="trailing" constant="5" id="jty-Lx-qWa"/>
+                            <constraint firstAttribute="trailing" secondItem="4ft-IG-NvL" secondAttribute="trailing" constant="5" id="mrU-8M-shO"/>
+                            <constraint firstItem="X3h-S9-xip" firstAttribute="top" secondItem="tqt-YW-2xY" secondAttribute="top" id="nuV-jz-SYQ"/>
+                            <constraint firstAttribute="bottom" secondItem="R0k-a8-frb" secondAttribute="bottom" id="ovL-16-YrO"/>
+                            <constraint firstItem="R0k-a8-frb" firstAttribute="leading" secondItem="X3h-S9-xip" secondAttribute="trailing" id="pZc-9c-vG2"/>
+                            <constraint firstItem="AUT-5Q-sB3" firstAttribute="leading" secondItem="h4O-cy-pDF" secondAttribute="trailing" constant="5" id="t4H-aE-Tai"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="tqt-YW-2xY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="7H4-Ih-1hF"/>
+                    <constraint firstAttribute="bottom" secondItem="tqt-YW-2xY" secondAttribute="bottom" id="mT5-Fo-A1T"/>
+                    <constraint firstAttribute="trailing" secondItem="tqt-YW-2xY" secondAttribute="trailing" constant="8" id="sDZ-Uy-bqu"/>
+                    <constraint firstItem="tqt-YW-2xY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sdg-LQ-4w0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="praiseButton" destination="R0k-a8-frb" id="ilZ-ar-Qu0"/>
+                <outlet property="praiseCount" destination="h4O-cy-pDF" id="9Vd-4p-OZW"/>
+                <outlet property="praiseImageView" destination="AUT-5Q-sB3" id="eZW-8H-2KI"/>
+                <outlet property="praiseListButton" destination="X3h-S9-xip" id="m5A-a3-kZB"/>
+            </connections>
+            <point key="canvasLocation" x="-139" y="-130"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="邻趣-详情页-点赞图标-灰-拷贝" width="17" height="17"/>
+    </resources>
+</document>

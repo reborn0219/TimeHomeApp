@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="L_CurrentCommunityTVC">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平安社区" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgH-wy-6z5">
+                        <rect key="frame" x="15" y="12" width="270" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="d6a-ia-QUr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                        <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="维明大街43号，中京国际大厦" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coA-51-arV">
+                        <rect key="frame" x="15" y="51" width="270" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="WZJ-Y8-eXI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                        <color key="textColor" red="0.34901960780000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未认证" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSc-DS-gz2">
+                        <rect key="frame" x="236" y="81" width="49" height="20"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="textColor" red="0.82352941180000006" green="0.1176470588" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="al8-pF-0Ew">
+                        <rect key="frame" x="15" y="120" width="270" height="1"/>
+                        <color key="backgroundColor" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="cme-0R-QDf"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="业主认证-社区认证--未认证图标" translatesAutoresizingMaskIntoConstraints="NO" id="HNK-4b-ARJ">
+                        <rect key="frame" x="210" y="79" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="swS-2k-0wt"/>
+                            <constraint firstAttribute="width" constant="24" id="zMW-on-vir"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="al8-pF-0Ew" firstAttribute="top" secondItem="mSc-DS-gz2" secondAttribute="bottom" constant="19" id="BpY-4H-z2x"/>
+                    <constraint firstItem="fgH-wy-6z5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="MEk-jm-DRC"/>
+                    <constraint firstAttribute="trailing" secondItem="al8-pF-0Ew" secondAttribute="trailing" constant="15" id="PoG-xu-AjS"/>
+                    <constraint firstItem="fgH-wy-6z5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Vpc-ZW-iY2"/>
+                    <constraint firstItem="coA-51-arV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="bgG-oy-UP3"/>
+                    <constraint firstItem="mSc-DS-gz2" firstAttribute="top" secondItem="coA-51-arV" secondAttribute="bottom" constant="10" id="c01-4D-q0q"/>
+                    <constraint firstAttribute="trailing" secondItem="mSc-DS-gz2" secondAttribute="trailing" constant="15" id="c3l-1g-ZeJ"/>
+                    <constraint firstItem="HNK-4b-ARJ" firstAttribute="centerY" secondItem="mSc-DS-gz2" secondAttribute="centerY" id="cAv-1k-voI"/>
+                    <constraint firstAttribute="trailing" secondItem="coA-51-arV" secondAttribute="trailing" constant="15" id="e39-4T-j0c"/>
+                    <constraint firstItem="al8-pF-0Ew" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="nwK-Cz-q32"/>
+                    <constraint firstAttribute="trailing" secondItem="fgH-wy-6z5" secondAttribute="trailing" constant="15" id="pfv-v0-aNW"/>
+                    <constraint firstItem="mSc-DS-gz2" firstAttribute="leading" secondItem="HNK-4b-ARJ" secondAttribute="trailing" constant="2" id="u28-7J-Pgk"/>
+                    <constraint firstItem="coA-51-arV" firstAttribute="top" secondItem="fgH-wy-6z5" secondAttribute="bottom" constant="12" id="va5-Jm-MYS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomLineView" destination="al8-pF-0Ew" id="QWz-Nu-Kcf"/>
+                <outlet property="leftBottomLabel" destination="coA-51-arV" id="yUK-00-lJR"/>
+                <outlet property="leftTopLabel" destination="fgH-wy-6z5" id="SSS-uy-7XG"/>
+                <outlet property="rightBottomImg" destination="HNK-4b-ARJ" id="gNI-am-JqG"/>
+                <outlet property="rightBottomLabel" destination="mSc-DS-gz2" id="PXz-Hw-AcV"/>
+            </connections>
+            <point key="canvasLocation" x="-144" y="-72"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="业主认证-社区认证--未认证图标" width="23" height="23"/>
+    </resources>
+</document>

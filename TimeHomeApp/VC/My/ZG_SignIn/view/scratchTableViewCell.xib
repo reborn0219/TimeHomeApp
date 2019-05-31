@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="scratchTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一二三四五" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IO-KN-JJH">
+                        <rect key="frame" x="10" y="13.5" width="66.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中了133元商品兑换券" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTo-Dg-61s">
+                        <rect key="frame" x="95.5" y="13.5" width="130" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="JNM-hV-bjA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22分钟前" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLO-9R-lG1">
+                        <rect key="frame" x="250" y="13" width="60" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="ebD-TZ-0Ao"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jTo-Dg-61s" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="BwU-eW-BtW"/>
+                    <constraint firstItem="FLO-9R-lG1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Csh-tJ-GoY"/>
+                    <constraint firstItem="FLO-9R-lG1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jTo-Dg-61s" secondAttribute="trailing" constant="10" id="F7o-ra-T3x"/>
+                    <constraint firstItem="1IO-KN-JJH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Xrp-eC-EXN"/>
+                    <constraint firstItem="jTo-Dg-61s" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dtu-vQ-QuK"/>
+                    <constraint firstItem="jTo-Dg-61s" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1IO-KN-JJH" secondAttribute="trailing" constant="10" id="fm0-0B-6UX"/>
+                    <constraint firstItem="1IO-KN-JJH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="iVe-UZ-brx"/>
+                    <constraint firstAttribute="trailing" secondItem="FLO-9R-lG1" secondAttribute="trailing" constant="10" id="qj4-zT-OPf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="info" destination="jTo-Dg-61s" id="a4X-tV-Cg8"/>
+                <outlet property="name" destination="1IO-KN-JJH" id="uE5-vs-ObM"/>
+                <outlet property="time" destination="FLO-9R-lG1" id="w4e-B8-HUK"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

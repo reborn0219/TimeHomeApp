@@ -1,0 +1,620 @@
+//
+//  WebViewVC.m
+//  TimeHomeApp
+//
+//  Created by us on 16/1/26.
+//  Copyright © 2016年 石家庄优思交通智能科技有限公司. All rights reserved.
+
+#import "WebViewVC.h"
+#import <JavaScriptCore/JavaScriptCore.h>
+#import "USTimes.h"
+#import "SharePresenter.h"
+#import "THIndicatorVC.h"
+#import "PostPresenter.h"
+#import "RecommendTopicModel.h"
+#import <WebKit/WebKit.h>
+#import "TZImagePickerController.h"
+#import "TOCropViewController.h"
+#import "LCActionSheet.h"
+#import "ZZCameraController.h"
+#import "ImageUitls.h"
+#import "AppSystemSetPresenters.h"
+#import "TZImagePickerController.h"
+#import "TZImagePickerController.h"
+#import "UIView+Layout.h"
+
+@interface WebViewVC ()<UIWebViewDelegate, SDPhotoBrowserDelegate,WKNavigationDelegate,TZImagePickerControllerDelegate, TOCropViewControllerDelegate>
+{
+    USTimes *ustimes;///JS 交互对象
+    NSString *maxPhotos;/** 最大选择图片数 */
+}
+
+/**
+ 选择图片所在的数组
+ */
+@property (nonatomic, strong) NSMutableArray *selectedPhotosArray;
+
+@property(nonatomic,strong) JSContext *context;
+/**
+ 相册选择器
+ */
+@property (nonatomic, strong) TZImagePickerController *imagePickerVC;
+@end
+
+@implementation WebViewVC
+
+
+#pragma  mark - 放大图片功能  返回临时占位图片（即原来的小图）
+- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index {
+    return PLACEHOLDER_IMAGE;
+}
+///返回高质量图片的url
+- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index {
+    
+    return [NSURL URLWithString:self.imageList[index]];
+}
+- (void)setImageList:(NSArray *)imageList {
+    
+    _imageList = imageList;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        SDPhotoBrowser *browser = [SDPhotoBrowser sharedInstanceSDPhotoBrower];
+        browser.sourceImagesContainerView = self.webView;
+        browser.imageCount = imageList.count;
+        browser.currentImageIndex = _currentIndex;
+        browser.delegate = self;
+        [browser show]; // 展示图片浏览器
+    });
+}
+
+- (NSMutableArray *)selectedPhotosArray {
+    if (!_selectedPhotosArray) {
+        _selectedPhotosArray = [[NSMutableArray alloc] init];
+    }
+    return _selectedPhotosArray;
+}
+
+#pragma  mark - LifeCircle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    maxPhotos = @"1";
+    
+    ustimes=[[USTimes alloc]init];
+    ustimes.webVC = self;
+    self.webView.scalesPageToFit = NO;//自动对页面进行缩放以适应屏幕
+    self.webView.dataDetectorTypes = UIDataDetectorTypePhoneNumber;//自动检测网页上的电话号码，单机可以拨打
+
+    if (self.url==nil) {
+        self.url=@"http://www.baidu.com";
+    }
+    if(![self.url hasPrefix:@"http://"])
+    {
+        self.url=[NSString stringWithFormat: @"http://%@",self.url];
+    }
+    
+    NSURL *httpUrl=[NSURL URLWithString:self.url];
+    NSURLRequest *httpRequest=[NSURLRequest requestWithURL:httpUrl];
+    [self.webView loadRequest:httpRequest];
+    
+    if (!_isNoRefresh) {
+        
+        @WeakObj(self);
+        
+        [self.webView.scrollView addPullToRefreshWithActionHandler:^{
+            
+            [selfWeak insertRowToTop];
+            
+        }];
+    }
+    
+    if (self.isShowRightBtn) {
+        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"分享"] style:(UIBarButtonItemStyleDone) target:self action:@selector(rightAction:)];
+        self.navigationItem.rightBarButtonItem = right;
+    }else
+    {
+        self.navigationItem.rightBarButtonItem=nil;
+    }
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.webView.scrollView triggerPullToRefresh];
+    [[NSUserDefaults standardUserDefaults]setObject:@YES forKey:@"isPush"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    if (_type == 10) {
+        [self getPostTitle];
+    }
+    
+}
+
+#pragma mark - 获取帖子标题
+
+-(void)getPostTitle
+{
+    
+    [PostPresenter getTopicPostsInfo:^(id  _Nullable data, ResultCode resultCode) {
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (resultCode == SucceedCode) {
+
+                TopicPostModel * TPML_Post = data;
+                NSString * s = [TPML_Post.title stringByReplacingOccurrencesOfString:@"#" withString:@""];
+                
+                self.navigationItem.title = s;
+            }
+            
+        });
+    } withTopicID:_postsid];
+
+}
+
+#pragma  mark - 刷新WebView
+
+-(void)insertRowToTop
+{
+//    [self.webView reload];
+    //清除cookies
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [storage cookies])
+    {
+        [storage deleteCookie:cookie];
+    }
+    //清除UIWebView的缓存
+    NSURLCache * cache = [NSURLCache sharedURLCache];
+    [cache removeAllCachedResponses];
+    [cache setDiskCapacity:0];
+    [cache setMemoryCapacity:0];
+    
+    [self.webView reload];
+
+}
+
+#pragma mark - UIWebViewDelegate
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    return YES;
+}
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+
+}
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    /**
+     *  禁止长按系统弹出框
+     */
+    [self.webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
+    [self.webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
+    
+    NSLog(@"-----%ld",_type);
+    
+    
+    [self.webView.scrollView.pullToRefreshView stopAnimating];
+    
+    if (_type == 4) {
+        if ([_webView.request.URL.absoluteString isEqualToString:_url]) {
+            self.navigationItem.rightBarButtonItem=nil;
+        }else {
+            UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"分享"] style:(UIBarButtonItemStyleDone) target:self action:@selector(rightAction:)];
+            self.navigationItem.rightBarButtonItem = right;
+        }
+        
+       // self.navigationItem.title = [_webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+        
+    }else if(_type==1)
+    {
+        
+        
+        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"分享"] style:(UIBarButtonItemStyleDone) target:self action:@selector(rightAction:)];
+        self.navigationItem.rightBarButtonItem = right;
+        
+        
+    }else if (_type == 5) {
+        //活动
+        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"分享"] style:(UIBarButtonItemStyleDone) target:self action:@selector(rightAction:)];
+        self.navigationItem.rightBarButtonItem = right;
+    }
+    
+    
+    if (_isGetCurrentTitle) {
+        //获取网页title
+        NSString *htmlTitle = @"document.title";
+        self.title = [webView stringByEvaluatingJavaScriptFromString:htmlTitle];//获取当前页面的title
+    }
+    
+    
+    if(webView.isLoading)
+    {
+        return;
+    }
+    
+    _context=[webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+    
+    _context[@"ustimes"] = ustimes;
+
+    
+    _context[@"test1"] = ^() {
+        NSArray *args = [JSContext currentArguments];
+        for (id obj in args) {
+            NSLog(@"%@",obj);
+        }
+    };
+    
+    ///异常处理
+    _context.exceptionHandler = ^(JSContext *con, JSValue *exception) {
+        NSLog(@"%@", exception);
+        con.exception = exception;
+    };
+    
+}
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    [self.webView.scrollView.pullToRefreshView stopAnimating];
+}
+#pragma mark - BackButtonAction
+
+-(void)backButtonClick
+{
+    if([self.webView canGoBack])
+    {
+        [self.webView goBack];
+    }
+    else
+    {
+        [super backButtonClick];
+    }
+}
+
+#pragma mark - rightAction
+
+- (void)rightAction:(UIBarButtonItem *)sender {
+    
+    ///分享
+    //分享应用
+    //http://timesres.usnoon.com/logo/applogo.png
+    
+    ShareContentModel * SCML = [[ShareContentModel alloc]init];
+    SCML.shareImg = SHARE_LOGO_IMAGE;
+    SCML.shareUrl = self.shareUr;
+    SCML.shareContext = @"";
+    SCML.shareSuperView = self.view;
+    SCML.type=self.shareTypes;
+    //                SCML.shareType = SSDKContentTypeWebPage;
+    SCML.shareType = SSDKContentTypeAuto;
+    
+    
+    if (_type == 1) {
+        
+        
+        if ([_webView.request.URL.absoluteString isEqualToString:_url]) {
+            
+            [[THIndicatorVC sharedTHIndicatorVC] startAnimating:self];
+            
+            [PostPresenter getTopicInfo:^(id  _Nullable data, ResultCode resultCode) {
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    if (resultCode == SucceedCode) {
+                        [[THIndicatorVC sharedTHIndicatorVC] stopAnimating];
+                        RecommendTopicModel * tempRTML = data;
+                        SCML.shareImg = tempRTML.picurl;
+                        SCML.shareTitle = tempRTML.remarks;
+                        [SharePresenter creatShareSDKcontent:SCML];
+                        
+                    }
+                    
+                });
+                
+                
+            } withTopicID:_topicid];
+            
+        }else
+        {
+            if (![XYString isBlankString:_webView.request.URL.absoluteString]) {
+                
+                [[THIndicatorVC sharedTHIndicatorVC] startAnimating:self];
+                
+                NSLog(@"%@",_webView.request.URL.absoluteString);
+                
+                NSString * string = _webView.request.URL.absoluteString;
+                NSRange range = [string rangeOfString:@"postsid="];
+                string = [string substringFromIndex:range.location+range.length];
+                range = [string rangeOfString:@"&token="];
+                string = [string substringToIndex:range.location];
+                NSLog(@"截取的值为：%@",string);
+                
+                [PostPresenter getTopicPostsInfo:^(id  _Nullable data, ResultCode resultCode) {
+                    
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        if (resultCode == SucceedCode) {
+                            [[THIndicatorVC sharedTHIndicatorVC] stopAnimating];
+                            
+                            TopicPostModel * TPML_Post = data;
+                            
+                            NSLog(@"------%@",data);
+                            if(TPML_Post.piclist.count>0)
+                            {
+                                NSString * url = [[TPML_Post.piclist firstObject] objectForKey:@"fileurl"];;
+                                SCML.shareImg = url;
+                                
+                            }
+                            SCML.shareTitle = TPML_Post.content_ls;
+                            [SharePresenter creatShareSDKcontent:SCML];
+                            
+                        }
+                    });
+                } withTopicID:string];
+                
+                NSLog(@"000000000------%@",self.sharePostArr);
+            }
+        }
+    }else if(_type == 2)
+    {
+        
+        if(_TPML.piclist.count>0)
+        {
+            NSString * url = [[_TPML.piclist firstObject] objectForKey:@"fileurl"];;
+            SCML.shareImg = url;
+            
+        }
+            SCML.shareTitle = _TPML.content_ls;
+            [SharePresenter creatShareSDKcontent:SCML];
+        
+    }else if (_type == 3) {
+            //公告
+            SCML.shareTitle = _noticeTitle;
+            SCML.shareContext = _noticeContent;
+            [SharePresenter creatShareSDKcontent:SCML];
+            
+    }else if (_type == 4) {
+            //社区警务
+            SCML.shareTitle = [_webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+            SCML.shareUrl = _webView.request.URL.absoluteString;
+            [SharePresenter creatShareSDKcontent:SCML];
+            
+    }else if (_type == 5) {
+            //社区活动
+            SCML.shareTitle = _userActivityModel.title;;
+            SCML.shareUrl = _userActivityModel.gotourl;
+            SCML.shareImg = _userActivityModel.picurl;
+            SCML.shareContext = [XYString IsNotNull:_userActivityModel.remarks];
+            [SharePresenter creatShareSDKcontent:SCML];
+            
+    }
+}
+#pragma mark - TZImagePickerControllerDelegate
+
+/// 用户点击了取消
+- (void)imagePickerControllerDidCancel:(TZImagePickerController *)picker { }
+/**
+ *  用户选择好了图片，如果assets非空，则用户选择了原图
+ *
+ *  @param picker 相册
+ *  @param photos 选中的图片
+ *  @param assets
+ */
+- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray *)photos sourceAssets:(NSArray *)assets{
+    
+    _imagePickerVC = nil;
+    
+    [self.selectedPhotosArray removeAllObjects];
+    [self.selectedPhotosArray addObjectsFromArray:photos];
+    
+    for (int i = 0; i < self.selectedPhotosArray.count; i++) {
+        
+        [[THIndicatorVC sharedTHIndicatorVC] startAnimating:self.tabBarController];
+        
+        [AppSystemSetPresenters upLoadPicFile:[self.selectedPhotosArray objectAtIndex:i] UpDataViewBlock:^(id  _Nullable data, ResultCode resultCode) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [[THIndicatorVC sharedTHIndicatorVC] stopAnimating];
+                
+                if(resultCode == SucceedCode) {
+                    ///图片上传成功
+                    NSDictionary * dic = data;
+                    
+                    //@"id"
+                    //@"url"
+                    
+                    JSValue *add =self.context[@"photoValus"];
+                    NSLog(@"Func==add: %@", add);
+                    JSValue *sum = [add callWithArguments:@[dic[@"id"], dic[@"fileurl"]]];
+                    NSLog(@"Func==sum: %@", sum);
+                    
+                }else {
+                    
+                    /** 图片上传失败 */
+                    if (![XYString isBlankString:data]) {
+                        [self showToastMsg:(NSString *)data Duration:3.0];
+                    }else {
+                        [self showToastMsg:@"图片上传失败" Duration:3.0];
+                    }
+                    
+                }
+                
+            });
+            
+        }];
+        
+    }
+    
+//    [GCDQueue executeInGlobalQueue:^{
+//        [GCDQueue executeInMainQueue:^{
+//
+//            TOCropViewController *cropController = [[TOCropViewController alloc] initWithImage:photos[0]];
+//            cropController.delegate = selfWeak;
+//            cropController.defaultAspectRatio = TOCropViewControllerAspectRatioSquare;
+//            cropController.rotateClockwiseButtonHidden = NO;
+//            //        cropController.rotateButtonsHidden = YES;
+//            cropController.aspectRatioLocked = YES;
+//            [selfWeak presentViewController:cropController animated:YES completion:nil];
+//            
+//        }];
+//    }];
+    
+}
+
+#pragma mark - JS选择相册方法
+-(void)upLoadImg:(id)param {
+
+    NSLog(@"param==%@",param);
+    if ([param isKindOfClass:[NSString class]]) {
+        maxPhotos = [NSString stringWithFormat:@"%@",param];
+    }else {
+        return;
+    }
+    
+    if ([XYString isBlankString:maxPhotos]) {
+        return;
+    }
+    
+    @WeakObj(self);
+    // 类方法
+    LCActionSheet *sheet = [LCActionSheet sheetWithTitle:@"" buttonTitles:@[@"拍照", @"从相册选择"] redButtonIndex:-1 clicked:^(NSInteger buttonIndex) {
+        if(buttonIndex==0)//拍照
+        {
+            /**
+             *  最多能选择数
+             */
+            ZZCameraController *cameraController = [[ZZCameraController alloc]init];
+            cameraController.takePhotoOfMax = maxPhotos.integerValue;
+            cameraController.isSaveLocal = NO;
+            cameraController.cameraSourceType = ZZImageSourceForMutable;
+            cameraController.isCanCustom = YES;
+            [cameraController showIn:self result:^(id responseObject){
+                
+                NSLog(@"responseObject==%@",responseObject);
+                
+                [selfWeak.selectedPhotosArray removeAllObjects];
+
+                [selfWeak.selectedPhotosArray addObjectsFromArray:responseObject];
+//                UIImage *newImg = (UIImage *)responseObject;
+
+//                UIImage *image = (UIImage *)responseObject;
+//                UIImage *newImg = [ImageUitls reduceImage:image percent:PIC_SCALING];
+                
+                for (int i = 0; i < selfWeak.selectedPhotosArray.count; i++) {
+                    
+                    [[THIndicatorVC sharedTHIndicatorVC] startAnimating:selfWeak.tabBarController];
+                    
+                    [AppSystemSetPresenters upLoadPicFile:[selfWeak.selectedPhotosArray objectAtIndex:i] UpDataViewBlock:^(id  _Nullable data, ResultCode resultCode) {
+                        
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            
+                            [[THIndicatorVC sharedTHIndicatorVC] stopAnimating];
+                            
+                            if(resultCode == SucceedCode) {
+                                ///图片上传成功
+                                NSDictionary * dic = data;
+                                
+                                //@"id"
+                                //@"url"
+                                
+                                JSValue *add =selfWeak.context[@"photoValus"];
+                                NSLog(@"Func==add: %@", add);
+                                JSValue *sum = [add callWithArguments:@[dic[@"id"], dic[@"fileurl"]]];
+                                NSLog(@"Func==sum: %@", sum);
+
+                            }else {
+                                
+                                /** 图片上传失败 */
+                                if (![XYString isBlankString:data]) {
+                                    [selfWeak showToastMsg:(NSString *)data Duration:3.0];
+                                }else {
+                                    [selfWeak showToastMsg:@"图片上传失败" Duration:3.0];
+                                }
+                                
+                            }
+                            
+                        });
+                        
+                    }];
+
+                }
+
+            }];
+            
+            
+        }else if (buttonIndex==1)//相册
+        {
+            _imagePickerVC = [[TZImagePickerController alloc] initWithMaxImagesCount:maxPhotos.integerValue delegate:selfWeak];
+            _imagePickerVC.pickerDelegate = selfWeak;
+            [selfWeak presentViewController:_imagePickerVC animated:YES completion:^{
+                
+            }];
+        }
+    }];
+    [sheet setTextColor:UIColorFromRGB(0xffffff)];
+    [sheet show];
+
+
+}
+#pragma mark - Cropper Delegate - 编辑图片
+//- (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image withRect:(CGRect)cropRect angle:(NSInteger)angle
+//{
+//    [cropViewController dismissAnimatedFromParentViewController:self toFrame:CGRectMake(self.view.centerX, self.view.centerY, 0, 0) completion:^{
+//        
+//        UIImage *newImg = [ImageUitls reduceImage:image percent:PIC_SCALING];
+//        
+//        @WeakObj(self);
+//        
+//        [[THIndicatorVC sharedTHIndicatorVC] startAnimating:self.tabBarController];
+//        
+//        [AppSystemSetPresenters upLoadPicFile:newImg UpDataViewBlock:^(id  _Nullable data, ResultCode resultCode) {
+//            
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                
+//                [[THIndicatorVC sharedTHIndicatorVC] stopAnimating];
+//                
+//                if(resultCode == SucceedCode) {
+//                    
+//                    
+//                    ///图片上传成功
+//                    NSDictionary * dic = data;
+//
+//                    JSValue *add =selfWeak.context[@"photoValus"];
+//                    NSLog(@"Func: %@", add);
+//                    JSValue *sum = [add callWithArguments:@[dic[@"id"], dic[@"fileurl"]]];
+//                    
+//                    
+//                }else {
+//                    ///图片上传失败
+//
+//                    
+//                    if ([data isKindOfClass:[NSString class]]) {
+//                        if (![XYString isBlankString:data]) {
+//                            [selfWeak showToastMsg:(NSString *)data Duration:3.0];
+//                        }else {
+//                            [selfWeak showToastMsg:@"图片上传失败" Duration:3.0];
+//                        }
+//                    }
+//                }
+//                
+//                
+//            });
+//            
+//        }];
+//        
+//        
+//    }];
+//}
+/**
+ *  取消编辑图片
+ */
+//- (void)cropViewController:(TOCropViewController *)cropViewController didFinishCancelled:(BOOL)cancelled {
+//    
+//    [cropViewController dismissAnimatedFromParentViewController:self toFrame:CGRectMake(self.view.centerX, self.view.centerY, 0, 0) completion:nil];
+//    
+//}
+@end
